@@ -21,6 +21,12 @@
 
 1. [Лабораторная работа №1](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab1.ipynb)
 2. [Лабораторная работа №2](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab2.ipynb)
+3. Лабораторная работа №3
+4. Лабораторная работа №4
+5. Лабораторная работа №5
+6. Лабораторная работа №6
+7. Лабораторная работа №7
+8. Лабораторная работа №8
 
 # Домашнее задание
 
