@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"></script>
+    <style>
+    /* html, body {margin: 0; height: 100%; overflow: hidden} */
+    .cifarImage {
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+    }
+    input:invalid {
+      border: red solid 3px;
+    }
+    .prediction {
+      text-align: 'center';
+    }
+
+    p {
+      text-align: 'center';
+    }
+
+    /* .modelFile {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+    .modelFile + label {
+        font-size: 1.25em;
+        font-weight: 700;
+        color: white;
+        background-color: black;
+        display: inline-block;
+    }
+
+    .modelFile:focus + label,
+    .modelFile + label:hover {
+        background-color: red;
+    }
+    .modelFile + label {
+      cursor: pointer; 
+    }
+    .modelFile:focus + label {
+      outline: 1px dotted #000;
+      outline: -webkit-focus-ring-color auto 5px;
+    } */
+    </style>
+  </head>
+  <body>
+    <h1 class='header'></h1>
+    <div>
+      <p>
+        <input type="file" name='file' class="modelFile" accept=".onnx"/>
+        <label for="file">Select ONNX file</label>
+      </p>
+      <p>
+        <input type="file" class="imageFile" accept="image/*" hidden />
+      </p>
+      <div class="settings" hidden>
+        <label>Class label</label>
+        <input type="number" class="labelId" min='0' max='99' value='0'/>
+        <button class="add" />Add</button>
+        <button class="random" />10 Random</button>
+        <button class="undo" />Undo</button>
+        <button class="reset" />Reset</button>
+        <p class="N"></p>
+      </div>
+      <div hidden >
+        <p>
+          <button class="shift left" />←</button>
+          <button class="shift up" />↑</button>
+          <button class="shift right" />→</button>
+          <button class="shift down" />↓</button>
+        </p>
+        <img class="cifarImage" src="" width="512px" height="512px" />
+
+      </p>
+      <p class="prediction" align='center'></p>
+      <p>
+        <canvas class="histogram" height='256px' width='512px'>
+      </p>
+    </div>
+    <script async defer src="logic.js"></script>
+  </body>
+</html>
