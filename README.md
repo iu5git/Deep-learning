@@ -3,7 +3,7 @@
 
 # Лекции
 1. [Лекция №1](https://github.com/iu5git/Deep-learning/blob/main/lectures/Лекция%201.%20Обучение%20с%20учителем.pdf)
-2. Лекция №2
+2. [Лекция №2](https://github.com/iu5git/Deep-learning/blob/main/lectures/Лекция%202.%20Сверточные%20нейронные%20сети.pdf)
 3. Лекция №3
 4. Лекция №4
 5. Лекция №5
