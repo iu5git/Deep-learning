@@ -21,12 +21,12 @@
 
 1. [Лабораторная работа №1](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab1.ipynb)
 2. [Лабораторная работа №2](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab2.ipynb)
-3. Лабораторная работа №3
-4. Лабораторная работа №4
-5. Лабораторная работа №5
-6. Лабораторная работа №6
-7. Лабораторная работа №7
-8. Лабораторная работа №8
+3. [Лабораторная работа №3](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab3.ipynb)
+4. [Лабораторная работа №4](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab4.ipynb)
+5. [Лабораторная работа №5](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab5.ipynb)
+6. [Лабораторная работа №6](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab6.ipynb)
+7. [Лабораторная работа №7](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab7.ipynb)
+8. [Лабораторная работа №8](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab8.ipynb)
 
 # Домашнее задание
 
