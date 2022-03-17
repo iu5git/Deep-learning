@@ -1,10 +1,11 @@
 # Проектирование Интеллектуальных Систем
 Репозиторий курса Проектирование Интеллектуальных Систем
+[Записи лекций](https://www.youtube.com/watch?v=07iFp7YcmOg&list=PLLELLTvDgUQ_d9eUj_3XVpAdGByuU37kT)
 
 # Лекции
 1. [Лекция №1](https://github.com/iu5git/Deep-learning/blob/main/lectures/Лекция%201.%20Обучение%20с%20учителем.pdf)
 2. [Лекция №2](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_2_CNN.pdf)
-3. Лекция №3
+3. [Лекция №3](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_3_Data_Augmentation.pdf)
 4. Лекция №4
 5. Лекция №5
 6. Лекция №6
