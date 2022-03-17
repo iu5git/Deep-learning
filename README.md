@@ -1,5 +1,6 @@
 # Проектирование Интеллектуальных Систем
 Репозиторий курса Проектирование Интеллектуальных Систем
+
 [Записи лекций](https://www.youtube.com/watch?v=07iFp7YcmOg&list=PLLELLTvDgUQ_d9eUj_3XVpAdGByuU37kT)
 
 # Лекции
