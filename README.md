@@ -2,6 +2,7 @@
 Репозиторий курса Проектирование Интеллектуальных Систем
 
 [Записи лекций](https://www.youtube.com/watch?v=07iFp7YcmOg&list=PLLELLTvDgUQ_d9eUj_3XVpAdGByuU37kT) Youtube
+Отчеты по лабораторным работам и ДЗ отправлять на почту [aikanev@bmstu.ru]
 
 # Лекции
 1. [Лекция №1](https://github.com/iu5git/Deep-learning/blob/main/lectures/Лекция%201.%20Обучение%20с%20учителем.pdf)
