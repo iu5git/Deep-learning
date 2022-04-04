@@ -8,7 +8,7 @@
 1. [Лекция №1](https://github.com/iu5git/Deep-learning/blob/main/lectures/Лекция%201.%20Обучение%20с%20учителем.pdf)
 2. [Лекция №2](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_2_CNN.pdf)
 3. [Лекция №3](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_3_Data_Augmentation.pdf)
-4. Лекция №4
+4. [Лекция №4](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_3_Transfer_Learning.pdf)
 5. Лекция №5
 6. Лекция №6
 7. Лекция №7
