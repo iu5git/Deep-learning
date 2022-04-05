@@ -14,7 +14,7 @@
 ### Загрузка изображений
 + **Вариант 1**. Требуется в одной из поисковых систем найти картинки по требуемым классам, затем скачать вручную в 3 разные папки.
 + **Вариант 2**. Требуется установить одно из расширений Chrome: [Image downloader - Imageye](https://chrome.google.com/webstore/detail/image-downloader-imageye/agionbommeaifngbhincahgmoflcikhm?hl=en-US//) или [Image Downloader](https://chrome.google.com/webstore/detail/image-downloader/cnpniohnfphhjihaiiggeabnkjhpaldj?hl=en-US//). После установки найти изображения в одной из поисковых систем, затем при помощи загруженного ранее расширения загрузить картинки.
-![image](https://user-images.githubusercontent.com/43611343/161835583-0ccab8c7-663f-40ef-a21c-891120852419.png)
+![image](images.png)
 #### Шаг 1
 В любой из поисковых систем выполнить поиск картинок на интересующую тему.
 #### Шаг 2
@@ -31,7 +31,7 @@
 Требуется перейти по ссылке на подготовленный [проект](https://colab.research.google.com/drive/1eMUdI_cAvc9u0bPLXCrPJvq1Ngp4yLdI?usp=sharing#scrollTo=k7OkUQAlZMua//) и сохранить себе копию на Google диск.
 #### Шаг 2
 В файловой системе Colab-файла в папке "content" необходимо создать три папки, согласно классам тематики Ваших изображений (пример: "Торт, Ласточка, Кошка") и загрузить туда скаченные ранее изображения. 
-![image](https://user-images.githubusercontent.com/43611343/161836816-5122f961-dfee-4f48-80e8-8567521401e7.png)
+![image](colab.png)
 
 Открываем файловую систему в Colab (автоматически откроется папка "content"). Нажимаем ПКМ в свободном пространстве и создаем папки по тематике классов.
 #### Шаг 3
