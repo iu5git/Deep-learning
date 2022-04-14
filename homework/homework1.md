@@ -46,17 +46,46 @@
 #### Шаг 2
 После создания проекта требуется создать в корне проекта папку media для последующего сохранения изображений и файлов формата ONNX. Внутри папки media необходимо создать папки "images" и "models".
 
-![image](https://user-images.githubusercontent.com/43611343/163047562-ff3f4178-d9cc-4a10-9b9f-efaaab5eeae7.png)
+![image](folders.png)
 #### Шаг 3
-В файл setting.py требуется добавить пути к ранее созданной папке media. В самом конце необходимо добавить следующий блок код:
+В файл setting.py требуется добавить пути к ранее созданной папке media. В самом конце необходимо добавить следующий блок кода:
 
 ![image](https://user-images.githubusercontent.com/43611343/163047087-974cc6b0-9691-44dc-a750-980ffe85600a.png)
 #### Шаг 4
 Добавить Python файл views.py в ту же папку, где был файл setting.py.
 
-Здесь будет ссылка на файл...
+```python
+from django.shortcuts import render
+from django.core.files.storage import FileSystemStorage
+import onnxruntime
+import numpy as np
+from PIL import Image
 
-![image](https://user-images.githubusercontent.com/43611343/163046056-3f32d871-6e00-4078-9b5d-b7080d447999.png)
+imageClassList = {'0': ['Торт'], '1': ['Ласточка'], '2': ['Кошка']}  #Сюда указать классы
+
+def scoreImagePage(request):
+    return render(request, 'scorepage.html')
+
+def predictImage(request):
+    fileObj = request.FILES['filePath']
+    fs = FileSystemStorage()
+    filePathName = fs.save('images/'+fileObj.name,fileObj)
+    filePathName = fs.url(filePathName)
+    modelName = request.POST.get('modelName')
+    scorePrediction = predictImageData(modelName, '.'+filePathName)
+    context = {'scorePrediction': scorePrediction}
+    return render(request, 'scorepage.html', context)
+
+def predictImageData(modelName, filePath):
+    img = Image.open(filePath).convert("RGB")
+    img = np.asarray(img.resize((32, 32), Image.ANTIALIAS))
+    sess = onnxruntime.InferenceSession(r'C:\DZ1\media\models\cifar100.onnx') #<-Здесь требуется указать свой путь к модели
+    outputOFModel = np.argmax(sess.run(None, {'input': np.asarray([img]).astype(np.float32)}))
+    score = imageClassList[str(outputOFModel)]
+    return score
+```
+
+![image](views.png)
 
 ##### Шаг 4.1
 В файле views.py изменить классы по Вашей тематике и указать путь к модели ONNX.
@@ -72,7 +101,7 @@
 Установить следующие библиотеки: onnx, onnxruntime, numpy, pillow.
 Пример установки одной библиотеки:
 
-![image](https://user-images.githubusercontent.com/43611343/163048370-a731e483-60ed-4db4-89a3-e57f788b5fbd.png)
+![image](shell.png)
 #### Шаг 7
 В папку templates добавить файл scorepage.html.
 
@@ -149,4 +178,4 @@
 #### Шаг 9
 Загрузить изображение и нажать на кнопку "submit".
 
-![image](https://user-images.githubusercontent.com/43611343/163248372-bc89f118-d947-43f2-b8e0-ceee11faf5c7.png)
+![image](page.png)
