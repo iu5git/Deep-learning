@@ -93,12 +93,10 @@ def predictImageData(modelName, filePath):
 ##### Шаг 4.1
 В файле views.py изменить классы по Вашей тематике и указать путь к модели ONNX.
 
-![image](https://user-images.githubusercontent.com/43611343/163056856-37a6f80f-3068-401e-9c7e-873a24ed7669.png)
 ```python
 imageClassList = {'0': ['Торт'], '1': ['Ласточка'], '2': ['Кошка']}  #Сюда указать классы
 ```
 
-![image](https://user-images.githubusercontent.com/43611343/163248523-05e05fb6-8622-4747-9a54-04864572862f.png)
 ```python
 sess = onnxruntime.InferenceSession(r'C:\DZ1\media\models\cifar100.onnx') #<-Здесь требуется указать свой путь к модели
 ```
