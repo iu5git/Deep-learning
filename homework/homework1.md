@@ -51,8 +51,13 @@
 В файл setting.py требуется добавить пути к ранее созданной папке media. В самом конце необходимо добавить следующий блок кода:
 
 ![image](https://user-images.githubusercontent.com/43611343/163047087-974cc6b0-9691-44dc-a750-980ffe85600a.png)
+```python
+```
+
 #### Шаг 4
 Добавить Python файл views.py в ту же папку, где был файл setting.py.
+
+![image](views.png)
 
 ```python
 from django.shortcuts import render
@@ -85,18 +90,26 @@ def predictImageData(modelName, filePath):
     return score
 ```
 
-![image](views.png)
-
 ##### Шаг 4.1
 В файле views.py изменить классы по Вашей тематике и указать путь к модели ONNX.
 
 ![image](https://user-images.githubusercontent.com/43611343/163056856-37a6f80f-3068-401e-9c7e-873a24ed7669.png)
+```python
+imageClassList = {'0': ['Торт'], '1': ['Ласточка'], '2': ['Кошка']}  #Сюда указать классы
+```
 
 ![image](https://user-images.githubusercontent.com/43611343/163248523-05e05fb6-8622-4747-9a54-04864572862f.png)
+```python
+sess = onnxruntime.InferenceSession(r'C:\DZ1\media\models\cifar100.onnx') #<-Здесь требуется указать свой путь к модели
+```
+
 #### Шаг 5
 В файле urls.py требуется заменить содержимое на следующий блок кода:
 
 ![image](https://user-images.githubusercontent.com/43611343/163247855-b5a0c9ac-67e6-444e-8956-63bdfcc841d0.png)
+```python
+```
+
 #### Шаг 6
 Установить следующие библиотеки: onnx, onnxruntime, numpy, pillow.
 Пример установки одной библиотеки:
