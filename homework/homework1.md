@@ -50,8 +50,11 @@
 #### Шаг 3
 В файл setting.py требуется добавить пути к ранее созданной папке media. В самом конце необходимо добавить следующий блок кода:
 
-![image](https://user-images.githubusercontent.com/43611343/163047087-974cc6b0-9691-44dc-a750-980ffe85600a.png)
 ```python
+import os
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'media')
 ```
 
 #### Шаг 4
@@ -104,8 +107,19 @@ sess = onnxruntime.InferenceSession(r'C:\DZ1\media\models\cifar100.onnx') #<-З�
 #### Шаг 5
 В файле urls.py требуется заменить содержимое на следующий блок кода:
 
-![image](https://user-images.githubusercontent.com/43611343/163247855-b5a0c9ac-67e6-444e-8956-63bdfcc841d0.png)
 ```python
+from django.contrib import admin
+from django.urls import path
+from django.conf.urls.static import static
+from django.conf import settings
+from . import views
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.scoreImagePage, name='scoreImagePage'),
+    path('predictImage', views.predictImage, name='predictImage'),
+]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 ```
 
 #### Шаг 6
