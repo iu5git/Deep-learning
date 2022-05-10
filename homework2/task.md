@@ -1,6 +1,10 @@
 # Домашнее задание №2
 ## Задание
 На основе лабораторной работы 7 или 8 разработать телеграм бот на Python для генерации текста или машинного перевода соответственно.
+
+Дополнительные [материалы](https://github.com/iu5git/Deep-learning/blob/main/notebooks/homework2.ipynb) для 7 и 8 лабораторных.
+[Пример](https://github.com/iu5git/Deep-learning/blob/main/notebooks/WebPractice.ipynb) использования модели ONNX в Python. 
+[Описание](https://github.com/ugapanyuk/BKIT_2021/blob/main/pres/chatbot/bkit_telegram.pdf) создания телеграм бота.
 ## Контрольные вопросы
 1. Архитектуры seq2seq и трансформер.
 2. Предобработка текста, эмбеддинг.
