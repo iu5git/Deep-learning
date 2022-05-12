@@ -51,7 +51,7 @@
 
 Поместить следующий код в файл *bot.py*:
 
-```
+```python
 import telebot
 import onnxruntime
 import sentencepiece as spm
@@ -63,7 +63,7 @@ import re
 #### Шаг 4
 В файл *bot.py* добавить код загрузки и открытия сессий с onnx моделями. Необходимо оставить только те модели и файлы, которые необходимы для решения выбранной задачи. Также в качестве аргумента функции *telebot.TeleBot('токен вашего бота')* указать ранее полученный от BotFather'а токен:
 
-```
+```python
 flag = 0
 #далее указывются названия используемых моделей и служебных файлов, лишнее просто закомментировать
 sp = spm.SentencePieceProcessor('m.model') #для генерации текста
@@ -82,7 +82,7 @@ bot = telebot.TeleBot('5210324951:AAGGMJbVM_P8u9mtqJqMiee6-N7LPJcyLRg')
 #### Шаг 5
 Без изменений поместить в *bot.py* код служебных функций и функций работы с onnx моделями:
 
-```
+```python
 def tokenize(text):
 	return re.findall("[A-Z]{2,}(?![a-z])|[A-Z][a-z]+(?=[A-Z])|[\'\w\-]+",text)
 
@@ -103,7 +103,7 @@ def get_trg_mask(trg_tensor):
 	return trg_pad_mask & trg_sub_mask
 ```
 
-```
+```python
 def Translate(message):
 
 	test_text = message.text
@@ -178,7 +178,7 @@ def Transformer(message):
 #### Шаг 6
 В зависимости от решаемой задачи в файл *bot.py* вставить либо первый, либо второй фрагмент кода (для генерации текста - первый, для машинного перевода - второй):
 
-```
+```python
 #данный код предназначен для решения задачи генерации текста
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
@@ -204,7 +204,7 @@ def get_text_messages(message):
 bot.polling(none_stop=True, interval=0)
 ```
 
-```
+```python
 #данный код предназначен для решения задачи машинного перевода
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
