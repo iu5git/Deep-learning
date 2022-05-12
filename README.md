@@ -11,7 +11,7 @@
 4. [Лекция №4](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_4_Transfer_Learning.pdf)
 5. [Лекция №5](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_5_Autoencoders.pdf)
 6. [Лекция №6](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_6_RNN.pdf)
-7. Лекция №7
+7. [Лекция №7](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_7_NLP.pdf)
 8. Лекция №8
 
 # Рубежный контроль
