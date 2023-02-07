@@ -1,10 +1,10 @@
-# Проектирование Интеллектуальных Систем
-Репозиторий курса Проектирование Интеллектуальных Систем
+# Разработка Нейросетевых Систем
+Репозиторий курса Разработка Нейросетевых Систем
 
 [Записи лекций](https://www.youtube.com/watch?v=07iFp7YcmOg&list=PLLELLTvDgUQ_d9eUj_3XVpAdGByuU37kT) Youtube
 Отчеты по лабораторным работам и ДЗ отправлять на почту aikanev@bmstu.ru
 
-# Лекции
+## Лекции
 1. [Лекция №1](https://github.com/iu5git/Deep-learning/blob/main/lectures/Лекция%201.%20Обучение%20с%20учителем.pdf)
 2. [Лекция №2](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_2_CNN.pdf)
 3. [Лекция №3](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_3_Data_Augmentation.pdf)
@@ -14,11 +14,11 @@
 7. [Лекция №7](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_7_NLP.pdf)
 8. [Лекция №8](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_8_Transformer.pdf)
 
-# Рубежный контроль
+## Рубежный контроль
 1. Рубежный контроль №1
 2. Рубежный контроль №2
 
-# Лабораторные работы
+## Лабораторные работы
 
 Выражаем благодарность Ишкову Денису за подготовку лабораторных работ
 
@@ -28,17 +28,20 @@
 4. [Лабораторная работа №4](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab4.ipynb)
 5. [Лабораторная работа №5](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab5.ipynb)
 6. [Лабораторная работа №6](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab6.ipynb)
-7. [Лабораторная работа №7](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab7.ipynb)
-8. [Лабораторная работа №8](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab8.ipynb)
+7. Лабораторная работа №7
+8. Лабораторная работа №8
 
-# Домашнее задание
+## Домашнее задание
 
-[Домашнее задание №1](https://github.com/iu5git/Deep-learning/blob/main/homework/homework1.md)
+- [Домашнее задание №1](https://github.com/iu5git/Deep-learning/blob/main/homework/homework1.md)
+- Домашнее задание №2
 
-[Домашнее задание №2](https://github.com/iu5git/Deep-learning/blob/main/homework2/task.md)
+## Дополнительные материалы
+- [Генерация текста](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab7.ipynb)
+- [Машинный перевод](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab8.ipynb)
+- [Телеграм бот](https://github.com/iu5git/Deep-learning/blob/main/homework2/task.md)
 
-
-# Вопросы к экзамену
+## Вопросы к экзамену
 1.	Опишите алгоритм обучения с учителем.
 2.	Устройство нейрона, формула вычисления значения. Объясните принцип его работы. 
 3.	Многослойный персептрон, архитектура, достоинства и недостатки.
