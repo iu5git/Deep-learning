@@ -5,14 +5,18 @@
 Отчеты по лабораторным работам и ДЗ отправлять на почту aikanev@bmstu.ru
 
 ## Лекции
-1. [Лекция №1](https://github.com/iu5git/Deep-learning/blob/main/lectures/Лекция%201.%20Обучение%20с%20учителем.pdf)
+1. [Лекция №1](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_1_DL.pdf)
 2. [Лекция №2](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_2_CNN.pdf)
 3. [Лекция №3](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_3_Data_Augmentation.pdf)
 4. [Лекция №4](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_4_Transfer_Learning.pdf)
 5. [Лекция №5](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_5_Autoencoders.pdf)
 6. [Лекция №6](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_6_RNN.pdf)
-7. [Лекция №7](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_7_NLP.pdf)
-8. [Лекция №8](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_8_Transformer.pdf)
+7. Лекция №7
+8. Лекция №8
+
+## Дополнительные лекции
+- [Обработка естественного языка](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_7_NLP.pdf)
+- [Трансформеры](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_8_Transformer.pdf)
 
 ## Рубежный контроль
 1. Рубежный контроль №1
