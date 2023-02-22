@@ -1,10 +1,14 @@
 # Разработка Нейросетевых Систем
 Репозиторий курса Разработка Нейросетевых Систем
 
-[Записи лекций](https://www.youtube.com/watch?v=07iFp7YcmOg&list=PLLELLTvDgUQ_d9eUj_3XVpAdGByuU37kT) Youtube
-Отчеты по лабораторным работам и ДЗ отправлять на почту aikanev@bmstu.ru
+### Отчеты
+Для **допуска** к экзамену необходимо подготовить отчет по каждому модулю. Отчеты по разделам содержат ваши результаты лабораторных работ и ДЗ. Фиксируйте этапы вашей работы, ваши вариации гиперпараметров и моделей, выводы к чему это приводит. На защиту приносите сразу текущую версию отчета.
+
+Отчеты отправлять на почту ``aikanev@bmstu.ru``
 
 ## Лекции
+[Записи лекций](https://www.youtube.com/watch?v=07iFp7YcmOg&list=PLLELLTvDgUQ_d9eUj_3XVpAdGByuU37kT) Youtube
+
 1. [Лекция №1](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_1_DL.pdf)
 2. [Лекция №2](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_2_CNN.pdf)
 3. [Лекция №3](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_3_Data_Augmentation.pdf)
