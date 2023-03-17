@@ -9,45 +9,44 @@
 ## Лекции
 [Записи лекций](https://www.youtube.com/watch?v=07iFp7YcmOg&list=PLLELLTvDgUQ_d9eUj_3XVpAdGByuU37kT) Youtube
 
-1. [Лекция №1](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_1_DL.pdf)
-2. [Лекция №2](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_2_CNN.pdf)
-3. [Лекция №3](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_3_Data_Augmentation.pdf)
-4. [Лекция №4](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_4_Transfer_Learning.pdf)
-5. [Лекция №5](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_5_Autoencoders.pdf)
-6. [Лекция №6](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_6_RNN.pdf)
+1. [Лекция №1. Введение в DL](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_1_DL.pdf)
+2. [Лекция №2. Сверточная нейросеть](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_2_CNN.pdf)
+3. [Лекция №3. Регуляризация и аугментация](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_3_Data_Augmentation.pdf)
+4. [Лекция №4. Перенос обучения](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_4_Transfer_Learning.pdf)
+5. [Лекция №5. Автоэнкодеры](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_5_Autoencoders.pdf)
+6. [Лекция №6. Рекуррентные нейросети](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_6_RNN.pdf)
 7. Лекция №7
-8. Лекция №8
+8. Лекция №8. Обработка текста и трансформеры
 
 ## Дополнительные лекции
 - [Обработка естественного языка](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_7_NLP.pdf)
 - [Трансформеры](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_8_Transformer.pdf)
 
 ## Рубежный контроль
-1. Рубежный контроль №1
+1. Рубежный контроль №1 (первые 3 лекции)
 2. Рубежный контроль №2
 
 ## Лабораторные работы
 
 Выражаем благодарность Ишкову Денису за подготовку лабораторных работ
 
-1. [Лабораторная работа №1](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab1.ipynb)
-2. [Лабораторная работа №2](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab2.ipynb)
-3. [Лабораторная работа №3](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab3.ipynb)
-4. [Лабораторная работа №4](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab4.ipynb)
-5. [Лабораторная работа №5](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab5.ipynb)
-6. Лабораторная работа №6
-7. [Лабораторная работа №7](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Forest_sat.ipynb)
-8. Лабораторная работа №8
+1. [Лабораторная работа №1](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab1.ipynb). Введение в DL
+2. [Лабораторная работа №2](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab2.ipynb). Сверточная нейросеть
+3. [Лабораторная работа №3](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab3.ipynb). Регуляризация и аугментация
+4. [Лабораторная работа №4](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab4.ipynb). Перенос обучения
+5. [Лабораторная работа №5](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab5.ipynb). Автоэнкодеры
+6. Лабораторная работа №6. Рекуррентные нейросети
+7. [Лабораторная работа №7](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Forest_sat.ipynb). Спутниковые снимки
+8. Лабораторная работа №8. LiDAR
 
 ## Домашнее задание
 
-- [Домашнее задание №1](https://github.com/iu5git/Deep-learning/blob/main/homework/homework1.md)
-- Домашнее задание №2
+- [Домашнее задание №1. Web-приложение](https://github.com/iu5git/Deep-learning/blob/main/homework/homework1.md)
+- [Домашнее задание №2. Телеграм-бот](https://github.com/iu5git/Deep-learning/blob/main/homework2/task.md). Согласовать тему с преподавателем
 
 ## Дополнительные материалы
 - [Генерация текста](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab7.ipynb)
 - [Машинный перевод](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab8.ipynb)
-- [Телеграм бот](https://github.com/iu5git/Deep-learning/blob/main/homework2/task.md)
 
 ## Вопросы к экзамену
 1.	Опишите алгоритм обучения с учителем.
