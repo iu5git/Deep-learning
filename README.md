@@ -45,8 +45,8 @@
 - [Домашнее задание №2. Телеграм-бот](https://github.com/iu5git/Deep-learning/blob/main/homework2/task.md). Согласовать тему с преподавателем
 
 ## Дополнительные материалы
-- [Генерация текста](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab7.ipynb)
-- [Машинный перевод](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab8.ipynb)
+- [Генерация текста](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Text_generation.ipynb)
+- [Машинный перевод](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Machine_Translation.ipynb)
 
 ## Вопросы к экзамену
 1.	Опишите алгоритм обучения с учителем.
