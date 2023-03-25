@@ -235,3 +235,6 @@ bot.polling(none_stop=True, interval=0)
 ![bot6](bot6.png)
 
 P.S. Для остановки работы Вашего телеграм бота достаточно просто прекратить выполнение файла *bot.py*.
+
+### Полезные ссылки
+1. [Стартовый гайд по ботам PyTelegramBotAPI](https://habr.com/ru/post/697052/)
