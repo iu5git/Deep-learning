@@ -35,7 +35,7 @@
 3. [Лабораторная работа №3](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab3.ipynb). Регуляризация и аугментация
 4. [Лабораторная работа №4](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab4.ipynb). Перенос обучения
 5. [Лабораторная работа №5](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab5.ipynb). Автоэнкодеры
-6. Лабораторная работа №6. Рекуррентные нейросети
+6. [Лабораторная работа №6](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab6.ipynb). Рекуррентные нейросети
 7. [Лабораторная работа №7](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Forest_sat.ipynb). Спутниковые снимки
 8. Лабораторная работа №8. LiDAR
 
