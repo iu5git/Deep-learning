@@ -16,15 +16,14 @@
 5. [Лекция №5. Автоэнкодеры](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_5_Autoencoders.pdf)
 6. [Лекция №6. Рекуррентные нейросети](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_6_RNN.pdf)
 7. Лекция №7
-8. Лекция №8. Обработка текста и трансформеры
+8. [Лекция №8. Трансформеры](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_8_Transformer.pdf)
 
 ## Дополнительные лекции
-- [Обработка естественного языка](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_7_NLP.pdf)
-- [Трансформеры](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_8_Transformer.pdf)
+- [Обработка естественного языка](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_NLP.pdf)
 
 ## Рубежный контроль
 1. Рубежный контроль №1 (первые 3 лекции)
-2. Рубежный контроль №2
+2. Рубежный контроль №2 (5-7 лекции)
 
 ## Лабораторные работы
 
