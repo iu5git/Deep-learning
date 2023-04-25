@@ -69,7 +69,7 @@ import onnxruntime
 import numpy as np
 from PIL import Image
 
-imageClassList = {'0': ['Торт'], '1': ['Ласточка'], '2': ['Кошка']}  #Сюда указать классы
+imageClassList = {'0': 'Торт', '1': 'Ласточка', '2': 'Кошка'}  #Сюда указать классы
 
 def scoreImagePage(request):
     return render(request, 'scorepage.html')
