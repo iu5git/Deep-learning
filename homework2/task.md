@@ -5,7 +5,7 @@
 Необходимо реализовать телеграм бот на Python для генерации изображений, шумоподавления аудио, классификации LiDAR, генерации текста, машинного перевода и тд. Тему согласовать с преподавателем (запрещено использовать ДЗ-1)
 
 - Дополнительные [материалы](https://github.com/iu5git/Deep-learning/blob/main/notebooks/homework2.ipynb) для сохранения моделей генерации текста и машинного перевода.
-- [Пример](https://github.com/iu5git/Deep-learning/blob/main/notebooks/WebPractice.ipynb) использования модели ONNX в Python. 
+- [Пример](https://github.com/iu5git/Deep-learning/blob/main/notebooks/onnxPractice.ipynb) использования модели ONNX в Python. 
 - [Описание](https://github.com/ugapanyuk/BKIT_2021/blob/main/pres/chatbot/bkit_telegram.pdf) создания телеграм бота.
 
 ## Контрольные вопросы
