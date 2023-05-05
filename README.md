@@ -15,7 +15,7 @@
 4. [Лекция №4. Перенос обучения](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_4_Transfer_Learning.pdf)
 5. [Лекция №5. Автоэнкодеры](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_5_Autoencoders.pdf)
 6. [Лекция №6. Рекуррентные нейросети](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_6_RNN.pdf)
-7. Лекция №7
+7. [Лекция №7. Сегментация, Object Detection, LiDAR](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_7_LiDAR.pdf)
 8. [Лекция №8. Трансформеры](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_8_Transformer.pdf)
 
 ## Дополнительные лекции
