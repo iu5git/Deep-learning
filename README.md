@@ -9,45 +9,43 @@
 ## Лекции
 [Записи лекций](https://www.youtube.com/watch?v=07iFp7YcmOg&list=PLLELLTvDgUQ_d9eUj_3XVpAdGByuU37kT) Youtube
 
-1. [Лекция №1](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_1_DL.pdf)
-2. [Лекция №2](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_2_CNN.pdf)
-3. [Лекция №3](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_3_Data_Augmentation.pdf)
-4. [Лекция №4](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_4_Transfer_Learning.pdf)
-5. [Лекция №5](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_5_Autoencoders.pdf)
-6. [Лекция №6](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_6_RNN.pdf)
-7. Лекция №7
-8. Лекция №8
+1. [Лекция №1. Введение в DL](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_1_DL.pdf)
+2. [Лекция №2. Сверточная нейросеть](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_2_CNN.pdf)
+3. [Лекция №3. Регуляризация и аугментация](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_3_Data_Augmentation.pdf)
+4. [Лекция №4. Перенос обучения](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_4_Transfer_Learning.pdf)
+5. [Лекция №5. Автоэнкодеры](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_5_Autoencoders.pdf)
+6. [Лекция №6. Рекуррентные нейросети](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_6_RNN.pdf)
+7. [Лекция №7. Сегментация, Object Detection, LiDAR](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_7_LiDAR.pdf)
+8. [Лекция №8. Трансформеры](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_8_Transformer.pdf)
 
 ## Дополнительные лекции
-- [Обработка естественного языка](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_7_NLP.pdf)
-- [Трансформеры](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_8_Transformer.pdf)
+- [Обработка естественного языка](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_NLP.pdf)
 
 ## Рубежный контроль
-1. Рубежный контроль №1
-2. Рубежный контроль №2
+1. Рубежный контроль №1 (первые 3 лекции)
+2. Рубежный контроль №2 (5-7 лекции)
 
 ## Лабораторные работы
 
 Выражаем благодарность Ишкову Денису за подготовку лабораторных работ
 
-1. [Лабораторная работа №1](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab1.ipynb)
-2. [Лабораторная работа №2](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab2.ipynb)
-3. [Лабораторная работа №3](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab3.ipynb)
-4. [Лабораторная работа №4](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab4.ipynb)
-5. [Лабораторная работа №5](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab5.ipynb)
-6. [Лабораторная работа №6](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab6.ipynb)
-7. [Лабораторная работа №7](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Forest_sat.ipynb)
-8. Лабораторная работа №8
+1. [Лабораторная работа №1](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab1.ipynb). Введение в DL
+2. [Лабораторная работа №2](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab2.ipynb). Сверточная нейросеть
+3. [Лабораторная работа №3](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab3.ipynb). Регуляризация и аугментация
+4. [Лабораторная работа №4](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab4.ipynb). Перенос обучения
+5. [Лабораторная работа №5](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab5.ipynb). Автоэнкодеры
+6. [Лабораторная работа №6](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab6.ipynb). Рекуррентные нейросети
+7. [Лабораторная работа №7](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Forest_sat.ipynb). Спутниковые снимки
+8. [Лабораторная работа №8](https://github.com/iu5git/Deep-learning/blob/main/notebooks/tree_classification.ipynb). Классификация LiDAR
 
 ## Домашнее задание
 
-- [Домашнее задание №1](https://github.com/iu5git/Deep-learning/blob/main/homework/homework1.md)
-- Домашнее задание №2
+- [Домашнее задание №1. Web-приложение](https://github.com/iu5git/Deep-learning/blob/main/homework/homework1.md)
+- [Домашнее задание №2. Телеграм-бот](https://github.com/iu5git/Deep-learning/blob/main/homework2/task.md). Согласовать тему с преподавателем
 
 ## Дополнительные материалы
-- [Генерация текста](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab7.ipynb)
-- [Машинный перевод](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab8.ipynb)
-- [Телеграм бот](https://github.com/iu5git/Deep-learning/blob/main/homework2/task.md)
+- [Генерация текста](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Text_generation.ipynb)
+- [Машинный перевод](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Machine_Translation.ipynb)
 
 ## Вопросы к экзамену
 1.	Опишите алгоритм обучения с учителем.
@@ -56,47 +54,58 @@
 4.	Виды активационных функций, назначение.
 5.	Количество нейронов, связей, параметров в полносвязной нейронной сети.
 6.	Эпоха, батч, итерация обучения.
-7.	Алгоритм обратного распространения ошибки.
-8.	Алгоритм оптимизации AdaGrad.
-9.	Алгоритм оптимизации RMSProp.
-10.	Алгоритм оптимизации с моментом.
-11.	Алгоритм оптимизации Adam.
-12.	Алгоритм оптимизации стохастического градиентного спуска.
-13.	Что такое гиперпараметры? Приведите примеры, оптимальные значения гиперпараметров.
-14.	Что такое свертка, как она применяется в нейронных сетях?
-15.	Свойства свертки.
-16.	Количество нейронов, связей и параметров в сверточном слое.
-17.	Опишите структуру набора данных.
-18.	Аугментация данных
-19.	Что такое stride, padding? Варианты.
-20.	Дайте определение пулинга. Примеры
-21.	Дайте определение регуляризации, dropout.
-22.	Переобучение и недообучение нейронной сети.
-23.	Дайте определение функции потери.
-24.	Кросс-энтропия, как функция потери.
-25.	Метод наименьших квадратов, как функция потери.
-26.	Архитектура трансформер.
-27.	Механизм внимания.
-28.	Архитектура seq2seq.
-29.	Понятие временного ряда (ВР). Примеры ВР. Цель анализа ВР. 
-30.	Опишите задачи регрессии и классификации.
-31.	Авторегрессионная модель. Преимущества и недостатки.
+7.  Дайте определение функции потерь.
+8.	Кросс-энтропия, как функция потерь.
+9.	Метод наименьших квадратов, как функция потерь.
+10. Алгоритм обратного распространения ошибки.
+11.	Алгоритм оптимизации AdaGrad.
+12.	Алгоритм оптимизации RMSProp.
+13.	Алгоритм оптимизации с моментом.
+14.	Алгоритм оптимизации Adam.
+15.	Алгоритм оптимизации стохастического градиентного спуска.
+16. Преимущества и недостатки стохастического и пакетного градиентного спуска.
+17.	Что такое гиперпараметры? Приведите примеры, оптимальные значения гиперпараметров.
+18. Оценка точности классификации F1-score, формула расчета и составляющие
+19. Что такое ONNX, Pytorch?
+20. Опишите структуру набора данных.
+21.	Что такое свертка, как она применяется в нейронных сетях?
+22.	Свойства свертки.
+23.	Количество нейронов, связей и параметров в сверточном слое.
+24.	Что такое stride, padding? Варианты.
+25. Дайте определение пулинга. Примеры
+26. Способы сокращения размерности карты признаков.
+27.	Аугментация данных
+28.	Переобучение и недообучение нейронной сети.
+29.	Дайте определение регуляризации, dropout.
+30. Штраф за сложность модели
+31. Сглаживание меток
 32.	Перенос обучения, дообучение. Принцип, преимущества.
-33.	Способы сокращения размерности карты признаков.
-34.	Архитектура автоэнкодера.
-35.	Понятие рекуррентных нейронных сетей. Структурная схема RNN.
-36.	Особенности обучения рекуррентных нейросетей. Проблема затухающих и взрывных градиентов.
-37.	LSTM сети. Преимущества LSTM по сравнению с RNN. 
-38.	Решение проблемы исчезающих градиентов в LSTM. Начальная инициализация параметров.
-39.	Возможные модификации LSTM. Их преимущества и недостатки.
-40.	GRU (Gated recurrent unit) сети.
-41.	Для чего необходима предобработка текста? Перечислите ее виды. 
-42.	Что такое N-граммы?
-43.	Что такое стемминг, лемматизация? Примеры и применение. 
-44.	Представление текста в виде векторной модели (vector space model)? Как вычисляются коэффициенты для bag-of-words и TF-IDF? 
-45.	В чем заключается векторное представление (embedding)? Примеры применения.
-46.	Преимущества и недостатки стохастического и пакетного градиентного спуска.
-47.	Что такое ONNX, Pytorch?
-48.	Оценка точности классификации F1-score, формула расчета и составляющие. 
-49.	Для чего используются сверточные слои нейронных сетей при анализе текста? 
-50.	Какие свойства рекуррентных и LSTM слоев обуславливают их широкое применение для анализа текста?
+33. Зачем требуется заморозка весов? Применение
+34.	Шумоподавляющий автоэнкодер.
+35. В чем заключается векторное представление (embedding)? Примеры применения.
+36. Сверточный автоэнкодер, применение.
+37. Коэффициент детерминации и средняя абсолютная ошибка
+38. Преимущества и недостатки современных генеративных моделей
+39. Архитектура GAN, обучение.
+40. Архитектура VAE, преимущества.
+41. Диффузионные модели: принципы, score-функция
+42. Архитектура Stable Diffusion
+43.	Понятие временного ряда (ВР). Примеры ВР. Цель анализа ВР. 
+44.	Опишите задачи регрессии и классификации.
+45.	Авторегрессионная модель. Преимущества и недостатки.
+46.	Понятие рекуррентных нейронных сетей. Структурная схема RNN.
+47.	Особенности обучения рекуррентных нейросетей. Проблема затухающих и взрывных градиентов.
+48.	LSTM сети. Преимущества LSTM по сравнению с RNN. 
+49.	Количество обучаемых параметров ячейки LSTM в PyTorch
+50.	Возможные модификации LSTM. Их преимущества и недостатки.
+51.	GRU (Gated recurrent unit) сети.
+52.	Применение рекуррентных и LSTM сетей для анализа текста
+53. Архитектура seq2seq.
+54. Метрики dice и IoU
+55. Архитектура PointNet
+56. Что такое плотное облако точек? Форматы и особенности обработки
+57. Архитектура U-Net
+58. Отличие задач сегментации, классификации и обнаружения объектов
+59.	Архитектура трансформер
+60.	Механизм внимания. Внутреннее и внешнее внимание
+61. Архитектуры BERT и GPT
