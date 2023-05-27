@@ -40,12 +40,17 @@
 
 ## Домашнее задание
 
+### Домашнее задание №1
 - [Домашнее задание №1. Web-приложение](https://github.com/iu5git/Deep-learning/blob/main/homework/homework1.md)
-- [Домашнее задание №2. Телеграм-бот](https://github.com/iu5git/Deep-learning/blob/main/homework2/task.md). Согласовать тему с преподавателем
 
-## Дополнительные материалы
+### Домашнее задание №2
+Согласовать тему с преподавателем
+- [Домашнее задание №2. Телеграм-бот](https://github.com/iu5git/Deep-learning/blob/main/homework2/task.md)
+
+#### Дополнительные материалы
 - [Генерация текста](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Text_generation.ipynb)
 - [Машинный перевод](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Machine_Translation.ipynb)
+- [Инструкция по разметке в cvat.ai](cvat)
 
 ## Вопросы к экзамену
 1.	Опишите алгоритм обучения с учителем.
