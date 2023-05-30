@@ -51,6 +51,7 @@
 - [Генерация текста](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Text_generation.ipynb)
 - [Машинный перевод](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Machine_Translation.ipynb)
 - [Инструкция по разметке в cvat.ai](cvat)
+- [Приложение на React для onnx YOLO](yolov7_ts)
 
 ## Вопросы к экзамену
 1.	Опишите алгоритм обучения с учителем.
