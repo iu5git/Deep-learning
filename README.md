@@ -8,7 +8,7 @@
 Отчеты отправлять на почту ``aikanev@bmstu.ru``
 
 ## Лекции
-[Записи лекций](https://www.youtube.com/watch?v=07iFp7YcmOg&list=PLLELLTvDgUQ_d9eUj_3XVpAdGByuU37kT) Youtube
+[Записи лекций](https://www.youtube.com/watch?v=RkuP6N9Kk5k&list=PLLELLTvDgUQ_d9eUj_3XVpAdGByuU37kT&index=3) Youtube
 
 1. [Лекция №1. Введение в DL](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_1_DL.pdf)
 2. [Лекция №2. Сверточная нейросеть](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_2_CNN.pdf)
