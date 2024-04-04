@@ -72,6 +72,18 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'media')
 ```
 
+Чтобы указать Django на то, где искать наши шаблоны проверьте файл `settings.py`. В нем в переменной `TEMPLATES` в поле `DIRS` должен быть указан путь к вашим шаблонам 
+
+```python
+TEMPLATES = [
+    {
+        # ...
+        "DIRS": [BASE_DIR / "DZ1/templates"],
+        # ...
+    },
+]
+```
+
 #### Шаг 4
 Добавить Python файл views.py в ту же папку, где был файл setting.py.
 
