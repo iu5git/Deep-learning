@@ -15,8 +15,8 @@
 3. [Лекция №3. Регуляризация и аугментация](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_3_Data_Augmentation.pdf)
 4. [Лекция №4. Перенос обучения](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_4_Transfer_Learning.pdf)
 5. [Лекция №5. Автоэнкодеры](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_5_Autoencoders.pdf)
-6. [Лекция №6. Рекуррентные нейросети](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_6_RNN.pdf)
-7. [Лекция №7. Сегментация, Object Detection, LiDAR](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_7_LiDAR.pdf)
+7. [Лекция №6. Сегментация, Object Detection, LiDAR](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_7_LiDAR.pdf)
+6. [Лекция №7. Рекуррентные нейросети](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_6_RNN.pdf)
 8. [Лекция №8. Трансформеры](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_8_Transformer.pdf)
 
 ## Дополнительные лекции
@@ -35,14 +35,14 @@
 3. [Лабораторная работа №3](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab3.ipynb). Регуляризация и аугментация
 4. [Лабораторная работа №4](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab4.ipynb). Перенос обучения
 5. [Лабораторная работа №5](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab5.ipynb). Автоэнкодеры
-6. [Лабораторная работа №6](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab6.ipynb). Рекуррентные нейросети
+6. [Лабораторная работа №6](https://github.com/iu5git/Deep-learning/blob/main/notebooks/tree_classification.ipynb). Классификация LiDAR
 7. [Лабораторная работа №7](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Forest_sat.ipynb). Спутниковые снимки
-8. [Лабораторная работа №8](https://github.com/iu5git/Deep-learning/blob/main/notebooks/tree_classification.ipynb). Классификация LiDAR
+8. [Лабораторная работа №8](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab6.ipynb). Рекуррентные нейросети
 
 ## Домашнее задание
 
 ### Домашнее задание №1
-Согласовать тему с преподавателем. Требуется разработать экспертную систему на основе `SSR` веб-приложения для классификации изображений 3 близких классов. Для этого нужно собрать собственный набор данных, минимум по 100 изображений на класс. По каждому классу приложение должно выводить описание и 2-3 ключевых параметра. Например для классификации авиалайнеров выводить описание, количество пассажиров и дальность полета.
+Согласовать тему с преподавателем. Требуется разработать экспертную систему на основе `SSR` веб-приложения для классификации изображений 3 близких классов. Для этого нужно собрать собственный набор данных, минимум по 100 изображений на класс. Приложение должно выводить загруженное изображение, иметь простой, но индивидуальный дизайн. По каждому классу приложение должно выводить описание и 2-3 ключевых параметра. Например для классификации авиалайнеров выводить описание, количество пассажиров и дальность полета.
 - [Web-приложение и сбор датасета](https://github.com/iu5git/Deep-learning/blob/main/homework/homework1.md)
 
 ### Домашнее задание №2
