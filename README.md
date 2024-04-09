@@ -15,8 +15,8 @@
 3. [Лекция №3. Регуляризация и аугментация](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_3_Data_Augmentation.pdf)
 4. [Лекция №4. Перенос обучения](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_4_Transfer_Learning.pdf)
 5. [Лекция №5. Автоэнкодеры](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_5_Autoencoders.pdf)
-7. [Лекция №6. Сегментация, Object Detection, LiDAR](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_7_LiDAR.pdf)
-6. [Лекция №7. Рекуррентные нейросети](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_6_RNN.pdf)
+7. [Лекция №6. Сегментация, Object Detection, LiDAR](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_LiDAR.pdf)
+6. [Лекция №7. Рекуррентные нейросети](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_RNN.pdf)
 8. [Лекция №8. Трансформеры](https://github.com/iu5git/Deep-learning/blob/main/lectures/Lection_8_Transformer.pdf)
 
 ## Дополнительные лекции
@@ -37,7 +37,7 @@
 5. [Лабораторная работа №5](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab5.ipynb). Автоэнкодеры
 6. [Лабораторная работа №6](https://github.com/iu5git/Deep-learning/blob/main/notebooks/tree_classification.ipynb). Классификация LiDAR
 7. [Лабораторная работа №7](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Forest_sat.ipynb). Спутниковые снимки
-8. [Лабораторная работа №8](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab6.ipynb). Рекуррентные нейросети
+8. [Лабораторная работа №8](https://github.com/iu5git/Deep-learning/blob/main/notebooks/LSTM.ipynb). Рекуррентные нейросети
 
 ## Домашнее задание
 
