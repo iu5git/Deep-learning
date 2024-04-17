@@ -7,6 +7,8 @@
 
 Отчеты отправлять на почту ``aikanev@bmstu.ru``
 
+[Примеры](/docs/) отчетов
+
 ## Лекции
 [Записи лекций](https://www.youtube.com/watch?v=RkuP6N9Kk5k&list=PLLELLTvDgUQ_d9eUj_3XVpAdGByuU37kT&index=3) Youtube
 
