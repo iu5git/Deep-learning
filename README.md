@@ -58,6 +58,8 @@
 - [Машинный перевод](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Machine_Translation.ipynb)
 - [Телеграм-бот](https://github.com/iu5git/Deep-learning/blob/main/homework2/task.md)
 
+## 中文
+1. [实验 №1](/notebooks/实验一.ipynb). 神经网络
 
 ## Вопросы к экзамену
 1.	Опишите алгоритм обучения с учителем.
