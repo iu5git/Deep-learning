@@ -7,7 +7,7 @@
 
 Отчеты отправлять на почту ``aikanev@bmstu.ru``
 
-[Примеры](/docs/) отчетов
+[Примеры](/report/) отчетов
 
 ## Лекции
 [Записи лекций](https://www.youtube.com/watch?v=RkuP6N9Kk5k&list=PLLELLTvDgUQ_d9eUj_3XVpAdGByuU37kT&index=3) Youtube
@@ -51,7 +51,7 @@
 Сохраняется тема ДЗ-1. Требуется разработать `SPA` приложение для object detection ваших классов. Разметить изображения набора данных и обучить модель `Yolo`.
 - [Инструкция по разметке в cvat.ai](cvat)
 - [Обучение YOLOv7](/notebooks/YOLOv7.ipynb)
-- [Приложение на React для onnx YOLO](yolov7_ts)
+- [Приложение на React для onnx YOLO](yolov7_ts). Демо-версия [приложения](https://iu5git.github.io/Deep-learning/) и файл обученной [модели](https://drive.google.com/file/d/1lpZMGNB9mYqHvFl_i6YU_U1sOLK0NDj_/view?usp=share_link)
 
 ## Дополнительные материалы
 - [Генерация текста](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Text_generation.ipynb)
