@@ -48,19 +48,23 @@
 - [Web-приложение и сбор датасета](https://github.com/iu5git/Deep-learning/blob/main/homework/homework1.md)
 
 ### Домашнее задание №2
-Сохраняется тема ДЗ-1. Требуется разработать `SPA` приложение для object detection ваших классов. Разметить изображения набора данных и обучить модель `Yolo`.
-- [Инструкция по разметке в cvat.ai](cvat)
+Сохраняется тема ДЗ-1. Требуется разработать `SPA` приложение для object detection ваших классов. Разметить изображения набора данных и обучить модель `Yolo` не менее 4 раз.
+- [Инструкция](cvat) по разметке в cvat.ai
 - [Обучение YOLOv7](/notebooks/YOLOv7.ipynb)
 - [Приложение на React для onnx YOLO](yolov7_ts). Демо-версия [приложения](https://iu5git.github.io/Deep-learning/) и файл обученной [модели](https://drive.google.com/file/d/1lpZMGNB9mYqHvFl_i6YU_U1sOLK0NDj_/view?usp=share_link) для 3 классов (Чайник для газовой плиты, Заварочный чайник, Электрический чайник)
+
 
 ## Дополнительные материалы
 - [Генерация текста](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Text_generation.ipynb)
 - [Машинный перевод](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Machine_Translation.ipynb)
 - [Телеграм-бот](https://github.com/iu5git/Deep-learning/blob/main/homework2/task.md)
+- Обучить модель yolov8-segment и преобразовать ее в файл ONNX: [yolov8+onnx.ipynb](/yolov8_segment/yolov8%2Bonnx.ipynb). Приложение на React для onnx YOLO [react.md](/yolov8_segment/react.md)
 
 ## 中文
 1. [实验 №1](/notebooks/实验一.ipynb). 神经网络
-2. [cvat.ai](cvat/中文.md)
+2. [作业的实验和应用](/homework/homework1-中文.md)
+3. [使用cvat.ai标记数据集](cvat/中文.md)
+4. 训练 yolov8实例分割模型并将其转换为 ONNX 文件：[yolov8+onnx.ipynb](/yolov8_segment/yolov8%2Bonnx.ipynb)。为yolov8-segment创建React应用的中文教程：[react.md](/yolov8_segment/react.md)
 
 ## Вопросы к экзамену
 1.	Опишите алгоритм обучения с учителем.
