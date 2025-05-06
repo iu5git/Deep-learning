@@ -33,7 +33,7 @@
 
 Выражаем благодарность Ишкову Денису за подготовку лабораторных работ
 
-1. [Лабораторная работа №1](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab1.ipynb). Введение в DL. [Arabic Lab1](/notebooks/Lab1_Arabic.ipynb)
+1. [Лабораторная работа №1](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab1.ipynb). Введение в DL
 2. [Лабораторная работа №2](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab2.ipynb). Сверточная нейросеть
 3. [Лабораторная работа №3](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab3.ipynb). Регуляризация и аугментация
 4. [Лабораторная работа №4](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab4.ipynb). Перенос обучения
