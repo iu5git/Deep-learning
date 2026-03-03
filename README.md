@@ -36,8 +36,8 @@
 1. [Лабораторная работа №1](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab1.ipynb). Введение в DL <a href="https://colab.research.google.com/github/iu5git/Deep-learning/blob/main/notebooks/Lab1.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 2. [Лабораторная работа №2](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab2.ipynb). Сверточная нейросеть <a href="https://colab.research.google.com/github/iu5git/Deep-learning/blob/main/notebooks/Lab2.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-3. [Лабораторная работа №3](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab3.ipynb). Регуляризация и аугментация
-4. [Лабораторная работа №4](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab4.ipynb). Перенос обучения
+3. [Лабораторная работа №3](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab3.ipynb). Регуляризация и аугментация <a href="https://colab.research.google.com/github/iu5git/Deep-learning/blob/main/notebooks/Lab3.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+4. [Лабораторная работа №4](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab4.ipynb). Перенос обучения <a href="https://colab.research.google.com/github/iu5git/Deep-learning/blob/main/notebooks/Lab4.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 5. [Лабораторная работа №5](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab5.ipynb). Автоэнкодеры
 6. [Лабораторная работа №6](https://github.com/iu5git/Deep-learning/blob/main/notebooks/tree_classification.ipynb). Классификация LiDAR
 7. [Лабораторная работа №7](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Forest_sat.ipynb). Спутниковые снимки
@@ -54,17 +54,19 @@
 * [Установка и администрирование Minio](https://github.com/iu5git/Networking/tree/main/S3)
 
 ### Домашнее задание №2
-Сохраняется тема ДЗ-1. Требуется разработать `SPA` приложение для object detection ваших классов. Разметить изображения набора данных и обучить модель `Yolo` не менее 4 раз. В приложении обновить цвета рамок и добавить к ним подписи.
+Сохраняется тема ДЗ-1. Требуется разработать `SPA` приложение для сегментации ваших классов из ДЗ-1. Разметить изображения набора данных и обучить модель `Yolo` не менее 4 раз. В приложении обновить цвета для классов и добавить к ним подписи.
 - [Инструкция](cvat) по разметке в cvat.ai
-- [Обучение YOLOv7](/notebooks/YOLOv7.ipynb)
-- [Приложение на React для onnx YOLO](yolov7_ts). Демо-версия [приложения](https://iu5git.github.io/Deep-learning/) и файл обученной [модели](https://drive.google.com/file/d/1lpZMGNB9mYqHvFl_i6YU_U1sOLK0NDj_/view?usp=share_link) для 3 классов (Чайник для газовой плиты, Заварочный чайник, Электрический чайник)
+- Обучить модель yolov8-segment и преобразовать ее в файл ONNX: [yolov8+onnx.ipynb](/yolov8_segment/yolov8%2Bonnx.ipynb). Приложение на React для onnx YOLO [react.md](/yolov8_segment/react.md)
 
+💡 **Дополнительное задание**: необходимо добавить в нижней части страницы список карточек для каждого класса (не менее 10 карточек для каждого класса). Каждая карточка является разновидностью вашего класса и имеет свое название (красное яблоко на дереве, зеленое яблоко на столе). Необходимо использовать модель `CLIP`, чтобы подавать в нее результаты сегментации изображений (не саму маску, а вырезанную часть изображения) и подавать на вход `CLIP` для поиска похожих карточек по текстовому описанию (по картинке найти короткие тексты названий карточек)
+
+* [Поиск карточек по изображению](https://github.com/iu5git/Web/blob/main/tutorials/CLIP/README.md)
 
 ## Дополнительные материалы
 - [Генерация текста](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Text_generation.ipynb)
 - [Машинный перевод](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Machine_Translation.ipynb)
 - [Телеграм-бот](https://github.com/iu5git/Deep-learning/blob/main/homework2/task.md)
-- Обучить модель yolov8-segment и преобразовать ее в файл ONNX: [yolov8+onnx.ipynb](/yolov8_segment/yolov8%2Bonnx.ipynb). Приложение на React для onnx YOLO [react.md](/yolov8_segment/react.md)
+- [Обучение YOLOv7](/notebooks/YOLOv7.ipynb). Приложение на [React для onnx YOLO](yolov7_ts). Демо-версия [приложения](https://iu5git.github.io/Deep-learning/) и файл обученной [модели](https://drive.google.com/file/d/1lpZMGNB9mYqHvFl_i6YU_U1sOLK0NDj_/view?usp=share_link) для 3 классов (Чайник для газовой плиты, Заварочный чайник, Электрический чайник)
 
 ## 中文
 1. [实验 №1](/notebooks/实验一.ipynb). 神经网络
