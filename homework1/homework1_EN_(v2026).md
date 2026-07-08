@@ -79,7 +79,7 @@ When training the model, you must use:
 
 For this task, use the prepared Jupyter Notebook:
 
-👉 **[Link to training templates](/TrainModel-notebooks/)**
+👉 **[Link to training templates](/homework1/TrainModel-notebooks/)**
 
 Workflow:
 1. Open the template in Google Colab
@@ -111,7 +111,7 @@ In this part, you need to create a web application for image classification usin
 
 Detailed instructions for creating the web application are provided in a separate document:
 
-👉 **[Link to FastAPI + Jinja2 application guide](/API-Jinja/FastApi-Jinja-instruct.md)**
+👉 **[Link to FastAPI + Jinja2 application guide](/homework1/API-Jinja/FastApi-Jinja-instruct.md)**
 
 ### Main Steps:
 
@@ -156,7 +156,7 @@ After starting the application:
 
 | Material | Description |
 |----------|-------------|
-| [Colab training template](/TrainModel-notebooks/) | Jupyter Notebook for model training |
-| [FastAPI + Jinja2 guide](/API-Jinja/FastApi-Jinja-instruct.md) | Detailed guide for building the web application |
+| [Colab training template](/homework1/TrainModel-notebooks/) | Jupyter Notebook for model training |
+| [FastAPI + Jinja2 guide](/homework1/API-Jinja/FastApi-Jinja-instruct.md) | Detailed guide for building the web application |
 | [ONNX Runtime documentation](https://onnxruntime.ai/) | Working with ONNX models |
 | [FastAPI documentation](https://fastapi.tiangolo.com/) | Official FastAPI documentation |

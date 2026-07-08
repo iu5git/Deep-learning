@@ -81,7 +81,7 @@ yandex-images-download Chrome --keywords "кошка, собака, птица" 
 
 Для выполнения работы используйте подготовленный Jupyter Notebook:
 
-👉 **[Ссылка на шаблоны для обучения](/TrainModel-notebooks/)**
+👉 **[Ссылка на шаблоны для обучения](/homework1/TrainModel-notebooks/)**
 
 Порядок работы:
 1. Откройте шаблон в Google Colab
@@ -113,7 +113,7 @@ yandex-images-download Chrome --keywords "кошка, собака, птица" 
 
 Подробная инструкция по созданию веб-приложения вынесена в отдельный документ:
 
-👉 **[Ссылка на инструкцию по созданию FastAPI + Jinja2 приложения (API-Jinja/)](/API-Jinja/FastApi-Jinja-instruct.md)**
+👉 **[Ссылка на инструкцию по созданию FastAPI + Jinja2 приложения (API-Jinja/)](/homework1/API-Jinja/FastApi-Jinja-instruct.md)**
 
 ### Основные шаги:
 
@@ -158,7 +158,7 @@ uvicorn main:app --reload
 
 | Материал | Описание |
 |----------|----------|
-| [Шаблон обучения в Colab](/TrainModel-notebooks/) | Jupyter Notebook для обучения модели |
-| [Инструкция по FastAPI + Jinja2](/API-Jinja/FastApi-Jinja-instruct.md) | Подробное руководство по созданию веб-приложения |
+| [Шаблон обучения в Colab](/homework1/TrainModel-notebooks/) | Jupyter Notebook для обучения модели |
+| [Инструкция по FastAPI + Jinja2](/API-Jinja/homework1/FastApi-Jinja-instruct.md) | Подробное руководство по созданию веб-приложения |
 | [ONNX Runtime документация](https://onnxruntime.ai/) | Работа с ONNX-моделями |
 | [FastAPI документация](https://fastapi.tiangolo.com/) | Официальная документация FastAPI |

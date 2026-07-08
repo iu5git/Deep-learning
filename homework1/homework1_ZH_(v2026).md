@@ -79,7 +79,7 @@ yandex-images-download Chrome --keywords "cat, dog, bird" --limit 100
 
 使用准备好的Jupyter Notebook来完成此任务：
 
-👉 **[训练模板链接](/TrainModel-notebooks/)**
+👉 **[训练模板链接](/homework1/TrainModel-notebooks/)**
 
 工作流程：
 1. 在Google Colab中打开模板
@@ -111,7 +111,7 @@ yandex-images-download Chrome --keywords "cat, dog, bird" --limit 100
 
 详细的Web应用程序创建说明在单独文档中提供：
 
-👉 **[FastAPI + Jinja2应用程序指南链接](/API-Jinja/FastApi-Jinja-instruct.md)**
+👉 **[FastAPI + Jinja2应用程序指南链接](/homework1/API-Jinja/FastApi-Jinja-instruct.md)**
 
 ### 主要步骤：
 
@@ -156,7 +156,7 @@ uvicorn main:app --reload
 
 | 材料 | 描述 |
 |----------|-------------|
-| [Colab训练模板](/TrainModel-notebooks/) | 用于模型训练的Jupyter Notebook |
-| [FastAPI + Jinja2指南](/API-Jinja/FastApi-Jinja-instruct.md) | 构建Web应用程序的详细指南 |
+| [Colab训练模板](/homework1/TrainModel-notebooks/) | 用于模型训练的Jupyter Notebook |
+| [FastAPI + Jinja2指南](/homework1/API-Jinja/FastApi-Jinja-instruct.md) | 构建Web应用程序的详细指南 |
 | [ONNX Runtime文档](https://onnxruntime.ai/) | 使用ONNX模型 |
 | [FastAPI文档](https://fastapi.tiangolo.com/) | FastAPI官方文档 |
