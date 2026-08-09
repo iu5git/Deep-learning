@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ONNX Vision v2026</title>
+
+<style>
+    :root {
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --text: #1f2430;
+    --muted: #6b7280;
+
+    --primary: #4a90e2;
+    --primary-hover: #3a7bd5;
+
+    --border: #e5e7eb;
+
+    --danger: #e74c3c;
+    --success: #2ecc71;
+
+    --shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    margin-bottom: 24px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.subtitle {
+    margin-top: 6px;
+    color: var(--muted);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.hidden {
+    display: none;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+label {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+input,
+select {
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: white;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--primary);
+}
+
+/* =========================
+   GRID
+========================= */
+
+.grid4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    background: #e5e7eb;
+    transition: 0.15s;
+}
+
+button:hover {
+    background: #d1d5db;
+}
+
+button.primary {
+    background: var(--primary);
+    color: white;
+}
+
+button.primary:hover {
+    background: var(--primary-hover);
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.info-block {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.controls-hint {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+}
+
+.controls-hint kbd {
+    font-family: inherit;
+    font-size: 12px;
+    padding: 2px 6px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: #f9fafb;
+    color: var(--text);
+}
+
+/* =========================
+   LABELS
+========================= */
+
+.labels-panel {
+    margin-top: 10px;
+}
+
+.labels-column ul {
+    padding-left: 18px;
+}
+
+/* =========================
+   IMAGE SECTION
+========================= */
+
+.image-settings {
+    margin-top: 10px;
+    padding: 12px;
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+}
+
+.image-meta {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.warning {
+    margin-top: 6px;
+    color: var(--danger);
+    font-size: 13px;
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+/* =========================
+   IMAGE CONTROLS
+========================= */
+
+.image-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.image-controls div {
+    display: flex;
+    gap: 6px;
+}
+
+.shift-btn {
+    min-width: 60px;
+    padding: 6px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.shift-btn:hover {
+    background: #dbeafe;
+}
+
+/* =========================
+   CANVAS / PREVIEW
+========================= */
+
+.image-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+canvas {
+    max-width: 100%;
+}
+
+/* важно: пиксельная визуализация */
+#previewCanvas {
+    image-rendering: pixelated;
+}
+
+/* =========================
+   OFFSET PANEL
+========================= */
+
+.offset-panel {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* =========================
+   RIGHT PANEL
+========================= */
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.prediction {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.top-prediction {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* =========================
+   HISTOGRAM
+========================= */
+
+#histogram {
+    width: 100%;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .grid4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid3 {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<!-- ONNX Runtime Web -->
+<script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<header>
+    <h1>Веб-лаборатория ONNX Vision</h1>
+
+    <p class="subtitle">
+        Учебно-демонстрационный стенд для визуализации работы
+        нейронных сетей в режиме "на лету"
+        с использованием пользовательских ONNX-моделей
+    </p>
+
+    <div class="info-block">
+        <strong>Порядок работы:</strong><br>
+        1. На первом шаге загрузить ONNX-модель (формат Dynamo не поддерживается),
+        задать размерность входных каналов и выбрать layout данных<br>
+        2. На втором шаге определить метки классов в соответствии с выбранным вариантом<br>
+        3. На третьем шаге загрузить входное изображение для выполнения инференса
+    </div>
+
+    <div class="warning">
+        Ограничения реализации: возможны переполнения WASM-памяти;
+        в таком случае требуется перезагрузка браузера
+        (ограничение Web ONNX Runtime)
+    </div>
+</header>
+
+<!-- ===================================================== -->
+<!-- ШАГ 1 -->
+<!-- ===================================================== -->
+
+<section class="card">
+
+    <h2>Шаг 1. Загрузка ONNX-модели</h2>
+
+    <div class="form-row">
+        <label for="modelFile">
+            ONNX-файл
+        </label>
+
+        <input
+            id="modelFile"
+            type="file"
+            accept=".onnx">
+    </div>
+
+    <!-- HIDDEN -->
+    <div class="grid4" style="display: none;">
+
+        <div>
+            <label for="nInput">N</label>
+            <input
+                id="nInput"
+                type="number"
+                min="1"
+                value="1">
+        </div>
+
+        <div>
+            <label for="cInput">C</label>
+            <input
+                id="cInput"
+                type="number"
+                min="1"
+                value="3">
+        </div>
+
+        <div>
+            <label for="hInput">H</label>
+            <input
+                id="hInput"
+                type="number"
+                min="1"
+                value="32">
+        </div>
+
+        <div>
+            <label for="wInput">W</label>
+            <input
+                id="wInput"
+                type="number"
+                min="1"
+                value="32">
+        </div>
+
+    </div>
+    <div class="form-row" style="display: none;">
+
+        <label for="layoutSelect">
+            Формат входного тензора
+        </label>
+
+        <select id="layoutSelect">
+            <option value="NCHW" selected>
+                NCHW
+            </option>
+
+            <option value="NHWC">
+                NHWC
+            </option>
+        </select>
+
+    </div>
+    <!-- ^^^ HIDDEN ^^^ -->
+
+    <div class="form-row">
+
+        <button id="buildBtn" class="primary">
+            Собрать
+        </button>
+
+    </div>
+
+    <div id="modelStatus" class="status">
+        Модель не загружена
+    </div>
+
+    
+    <!-- HIDDEN -->
+    <div id="modelInfo" class="info-block" style="display: none;">
+        <p><strong>Вход:</strong> <span id="inputName">-</span></p>
+        <p><strong>Выход:</strong> <span id="outputName">-</span></p>
+        <p><strong>Тип:</strong> <span id="tensorType">-</span></p>
+        <p><strong>Размерность:</strong> <span id="tensorDims">-</span></p>
+    </div>
+    <!-- ^^^ HIDDEN ^^^ -->
+
+
+</section>
+
+<!-- ===================================================== -->
+<!-- ШАГ 2 -->
+<!-- ===================================================== -->
+
+<section class="card hidden" id="labelsSection">
+
+    <h2>Шаг 2. Настройка классов</h2>
+
+    <p>
+        Укажите соответствие выходов модели классам CIFAR100.
+    </p>
+    
+    <p id="outputCountInfo">
+        Количество выходов модели: -
+    </p>
+
+    <div class="form-row">
+
+        <label for="labelId">
+            ID класса CIFAR100
+        </label>
+
+        <input
+            id="labelId"
+            type="number"
+            min="0"
+            max="99"
+            value="0">
+
+        <button id="addBtn">
+            Добавить
+        </button>
+
+        <button id="undoBtn">
+            Отменить
+        </button>
+
+        <button id="resetBtn">
+            Сбросить
+        </button>
+
+    </div>
+
+    <div class="form-row">
+        <button id="generateRandomBtn">
+            10 случайных
+        </button>
+        <button id="showClassesBtn" class="secondary" style="margin-left: 10px;">
+            📋 Список классов
+        </button>
+    </div>
+
+    <div id="labelsInfo" class="labels-panel">
+
+        <div class="labels-column">
+
+            <h3>Назначенные выходы</h3>
+
+            <ul id="assignedLabels">
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- ШАГ 3 -->
+<!-- ===================================================== -->
+
+<section class="card hidden" id="imageSection">
+
+    <h2>Шаг 3. Исследование модели</h2>
+
+    <div class="form-row">
+
+        <label for="imageFile">
+            Изображение
+        </label>
+
+        <input
+            id="imageFile"
+            type="file"
+            accept="image/*">
+
+    </div>
+
+    <div class="image-settings">
+
+        <h3>Параметры изображения</h3>
+
+        <div class="grid3">
+
+            <div>
+                <label for="imageWidth">
+                    Ширина
+                </label>
+
+                <input
+                    id="imageWidth"
+                    type="number"
+                    min="1"
+                    value="32">
+            </div>
+
+            <div>
+                <label for="imageHeight">
+                    Высота
+                </label>
+
+                <input
+                    id="imageHeight"
+                    type="number"
+                    min="1"
+                    value="32">
+            </div>
+
+            <div>
+                <label for="shiftStep">
+                    Шаг сдвига
+                </label>
+
+                <input
+                    id="shiftStep"
+                    type="number"
+                    min="1"
+                    value="1">
+            </div>
+
+        </div>
+
+        <div class="image-meta">
+            <span>
+                Рабочий размер:
+                <strong id="workingSize">
+                    32 x 32
+                </strong>
+            </span>
+        </div>
+        <div
+            id="imageWarning"
+            class="warning">
+        </div>
+    </div>
+    
+    <div class="controls-hint">
+        <kbd>←</kbd> <kbd>↑</kbd> <kbd>→</kbd> <kbd>↓</kbd> — сдвиг изображения ·
+        <kbd>Space</kbd> — увеличить шаг ·
+        <kbd>Shift</kbd> + <kbd>Space</kbd> — уменьшить шаг
+    </div>
+
+    <div class="workspace">
+
+        <div class="left-panel">
+
+            <div class="image-controls">
+
+                <button
+                    class="shift-btn"
+                    id="shiftUpBtn">
+                    ↑
+                </button>
+
+                <div>
+
+                    <button
+                        class="shift-btn"
+                        id="shiftLeftBtn">
+                        ←
+                    </button>
+
+                    <button
+                        class="shift-btn"
+                        id="shiftRightBtn">
+                        →
+                    </button>
+
+                </div>
+
+                <button
+                    class="shift-btn"
+                    id="shiftDownBtn">
+                    ↓
+                </button>
+                
+                <button
+                    class="shift-btn"
+                    id="resetShiftBtn">
+                    Сброс
+                </button>
+            </div>
+
+            <div class="image-preview">
+
+                <canvas
+                    id="previewCanvas"
+                    width="256"
+                    height="256">
+                </canvas>
+
+            </div>
+
+            <div class="offset-panel">
+                <span>
+                    offset:
+                    (<strong id="offsetXValue">0</strong>,
+                    <strong id="offsetYValue">0</strong>)
+                </span>
+            </div>
+
+        </div>
+
+        <div class="right-panel">
+            <div id="prediction" class="prediction">
+                Предсказание отсутствует
+            </div>
+            <div id="topPrediction" class="top-prediction"></div>
+            <canvas id="histogram" width="800" height="500"></canvas>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- СКРЫТЫЕ СЛУЖЕБНЫЕ CANVAS -->
+<!-- ===================================================== -->
+
+<canvas
+    id="sourceCanvas"
+    hidden>
+</canvas>
+
+<canvas
+    id="workingCanvas"
+    hidden>
+</canvas>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- МОДАЛЬНОЕ ОКНО СО СПИСКОМ КЛАССОВ -->
+<!-- ===================================================== -->
+
+<div id="classesModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Классы CIFAR-100</h2>
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+        </div>
+        <div class="modal-body">
+            <input type="text" id="classSearchInput" placeholder="Поиск по названию...">
+            <div id="classListContainer" style="max-height: 400px; overflow-y: auto; margin-top: 10px;">
+                <table id="classTable" style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background: #f0f0f0; position: sticky; top: 0;">
+                            <th style="padding: 8px; text-align: left;">Индекс</th>
+                            <th style="padding: 8px; text-align: left;">Название</th>
+                        </tr>
+                    </thead>
+                    <tbody id="classTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    height: 70vh;  /* ФИКСИРОВАННАЯ ВЫСОТА 70% от высоты экрана */
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    flex-shrink: 0;  /* Запрещаем сжатие */
+}
+
+.close-btn {
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+.modal-body {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;  /* Важно для правильной работы flex */
+}
+
+#classSearchInput {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    flex-shrink: 0;  /* Запрещаем сжатие */
+}
+
+#classListContainer {
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 10px;
+    min-height: 0;  /* Важно для правильной работы flex */
+}
+
+#classTableBody tr:hover {
+    background-color: #f5f5f5;
+}
+
+#classTableBody td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #eee;
+}
+</style>
+
+<script>
+    class ModelManager {
+
+    constructor() {
+        this.session = null;
+
+        this.inputName = null;
+        this.outputName = null;
+
+        this.inputMetadata = null;
+        this.outputMetadata = null;
+
+        this.loaded = false;
+    }
+
+    async loadModel(file) {
+
+        if (!file) {
+            throw new Error("Файл модели не выбран");
+        }
+
+        const buffer = await file.arrayBuffer();
+
+        try {
+            this.session = await ort.InferenceSession.create(
+                buffer,
+                {
+                    executionProviders: ["cpu"]  // ["wasm"] // виртуальная
+                }
+            );
+        } catch (err) {
+            throw new Error(
+                `Не удалось загрузить ONNX-модель: ${err.message}`
+            );
+        }
+
+        if (!this.session.inputNames?.length) {
+            throw new Error("У модели отсутствуют входы");
+        }
+
+        if (!this.session.outputNames?.length) {
+            throw new Error("У модели отсутствуют выходы");
+        }
+
+        this.inputName = this.session.inputNames[0];
+        this.outputName = this.session.outputNames[0];
+
+        console.log("== MODEL LOAD ==")
+        console.log(this.session.inputNames);
+        console.log(this.session.inputMetadata);
+
+        // =========================
+        // SAFE METADATA HANDLING
+        // =========================
+
+        this.inputMetadata =
+            this.session.inputMetadata?.[this.inputName] ||
+            Object.values(this.session.inputMetadata || {})[0] ||
+            null;
+
+        this.outputMetadata =
+            this.session.outputMetadata?.[this.outputName] ||
+            Object.values(this.session.outputMetadata || {})[0] ||
+            null;
+
+        this.loaded = true;
+
+        return this.getModelInfo();
+    }
+
+    getModelInfo() {
+
+        if (!this.loaded) {
+            return null;
+        }
+
+        console.log("ONNX input metadata:", this.session.inputMetadata);
+        console.log("ONNX output metadata:", this.session.outputMetadata);
+
+        return {
+            inputName: this.inputName,
+            outputName: this.outputName,
+
+            inputType: this.inputMetadata?.type || "float32",
+            outputType: this.outputMetadata?.type || "float32",
+
+            inputDimensions: this.inputMetadata?.dimensions ?? [],
+            outputDimensions: this.outputMetadata?.dimensions ?? []
+        };
+    }
+
+    // =========================
+    // OUTPUT SIZE DETECTION
+    // =========================
+
+    getOutputCount() {
+
+        if (!this.loaded) return 0;
+
+        const dims = this.outputMetadata?.dimensions || [];
+
+        // ищем последний валидный размер
+        for (let i = dims.length - 1; i >= 0; i--) {
+            const d = dims[i];
+
+            if (typeof d === "number" && d > 1) {
+                return d;
+            }
+        }
+
+        return 0;
+    }
+
+    // =========================
+    // INPUT VALIDATION
+    // =========================
+
+    validateInputShape(expectedShape) {
+
+        if (!this.loaded) {
+            throw new Error("Модель не загружена");
+        }
+
+        const actual = this.inputMetadata?.dimensions ?? [];
+
+        if (actual.length !== expectedShape.length) {
+            return {
+                ok: false,
+                message:
+                    `Модель ожидает ${actual.length} измерений, ` +
+                    `а пользователь указал ${expectedShape.length}`
+            };
+        }
+
+        for (let i = 0; i < actual.length; i++) {
+
+            const modelDim = actual[i];
+            const userDim = expectedShape[i];
+
+            // dynamic axis (-1) игнорируем
+            if (typeof modelDim !== "number" || modelDim === -1) {
+                continue;
+            }
+
+            if (modelDim !== userDim) {
+                return {
+                    ok: false,
+                    message:
+                        `Несовпадение размерности по оси ${i}: ` +
+                        `${modelDim} ≠ ${userDim}`
+                };
+            }
+        }
+
+        return {
+            ok: true,
+            message: "OK"
+        };
+    }
+
+    // =========================
+    // INFERENCE
+    // =========================
+
+    async predict(inputTensor) {
+
+        if (!this.loaded) {
+            throw new Error("Модель не загружена");
+        }
+
+        if (!(inputTensor instanceof ort.Tensor)) {
+            throw new Error("В predict() должен передаваться ort.Tensor");
+        }
+
+        const feeds = {
+            [this.inputName]: inputTensor
+        };
+
+        console.log("tensor shape:", inputTensor.dims);
+        console.log("tensor sample:", inputTensor.data.slice(0, 10));
+
+        let results;
+
+        try {
+            results = await this.session.run(feeds);
+        } catch (err) {
+            throw new Error(
+                `Ошибка инференса: ${err.message}`
+            );
+        }
+
+        const outputTensor =
+            results[this.outputName] ||
+            Object.values(results)[0];
+
+        if (!outputTensor) {
+            throw new Error("Выходной тензор отсутствует");
+        }
+
+        return outputTensor;
+    }
+
+    async predictArray(inputTensor) {
+
+        const output = await this.predict(inputTensor);
+        return Array.from(output.data);
+    }
+
+    // =========================
+    // POSTPROCESSING
+    // =========================
+
+    softmax(logits) {
+
+        if (!logits?.length) {
+            return [];
+        }
+
+        const maxValue = Math.max(...logits);
+
+        const exps = logits.map(
+            x => Math.exp(x - maxValue)
+        );
+
+        const sum = exps.reduce(
+            (a, b) => a + b,
+            0
+        );
+
+        return exps.map(
+            x => x / sum
+        );
+    }
+
+    getTopClass(scores) {
+
+        if (!scores?.length) {
+            return {
+                index: -1,
+                value: 0
+            };
+        }
+
+        let bestIndex = 0;
+        let bestValue = scores[0];
+
+        for (let i = 1; i < scores.length; i++) {
+            if (scores[i] > bestValue) {
+                bestValue = scores[i];
+                bestIndex = i;
+            }
+        }
+
+        return {
+            index: bestIndex,
+            value: bestValue
+        };
+    }
+
+    // =========================
+    // CLEANUP
+    // =========================
+
+    dispose() {
+
+        try {
+            this.session?.release?.();
+        } catch (_) {
+            // ignore
+        }
+        
+        this.session?.endProfiling?.();
+        this.session = null;
+
+        this.inputName = null;
+        this.outputName = null;
+
+        this.inputMetadata = null;
+        this.outputMetadata = null;
+
+        this.loaded = false;
+    }
+}
+
+window.modelManager = new ModelManager();
+</script>
+
+<script>
+    class ImageManager {
+
+    constructor() {
+
+        this.image = null;
+
+        // sprite 32x32 (сжатый оригинал)
+        this.spriteCanvas = document.createElement("canvas");
+        this.spriteCtx = this.spriteCanvas.getContext("2d");
+
+        // working canvas (model input)
+        this.workingCanvas = document.getElementById("workingCanvas");
+        this.workingCtx = this.workingCanvas.getContext("2d");
+
+        // preview
+        this.previewCanvas = document.getElementById("previewCanvas");
+        this.previewCtx = this.previewCanvas.getContext("2d");
+
+        this.width = 32;
+        this.height = 32;
+
+        this.offsetX = 0;
+        this.offsetY = 0;
+
+        this.shiftStep = 1;
+        this.layout = "NCHW";
+    }
+
+    setConfig({ width, height, shiftStep, layout }) {
+
+        this.width = width;
+        this.height = height;
+
+        this.shiftStep = Number(shiftStep) || 1;
+        this.layout = layout;
+
+        this.workingCanvas.width = width;
+        this.workingCanvas.height = height;
+
+        this.spriteCanvas.width = width;
+        this.spriteCanvas.height = height;
+
+        this.previewCtx.imageSmoothingEnabled = false;
+
+        if (this.image) {
+            this._buildSprite();
+            this.render();
+        }
+    }
+
+    // =========================
+    // LOAD + RESIZE TO SPRITE
+    // =========================
+
+    async load(file) {
+
+        if (!file) throw new Error("Изображение не выбрано");
+
+        const img = new Image();
+        img.src = URL.createObjectURL(file);
+
+        await new Promise((res, rej) => {
+            img.onload = res;
+            img.onerror = rej;
+        });
+
+        this.image = img;
+
+        this._buildSprite();
+
+        this.offsetX = 0;
+        this.offsetY = 0;
+
+        this.render();
+    }
+
+    _buildSprite() {
+
+        this.spriteCtx.clearRect(0, 0, this.width, this.height);
+
+        this.spriteCtx.imageSmoothingEnabled = true;
+
+        this.spriteCtx.drawImage(
+            this.image,
+            0, 0,
+            this.width,
+            this.height
+        );
+    }
+    // =========================
+    // SHIFT (sprite movement)
+    // =========================
+
+    shift(dx, dy) {
+
+        const step = Number(this.shiftStep) || 1;
+
+        this.offsetX += dx * step;
+        this.offsetY += dy * step;
+
+        // clamp inside canvas bounds
+        const maxX = this.width;
+        const maxY = this.height;
+
+        this.offsetX = Math.max(-maxX, Math.min(maxX, this.offsetX));
+        this.offsetY = Math.max(-maxY, Math.min(maxY, this.offsetY));
+
+        this.render();
+    }
+
+    resetShift() {
+        this.offsetX = 0;
+        this.offsetY = 0;
+        this.render();
+    }
+
+    // =========================
+    // RENDER PIPELINE
+    // =========================
+
+    render() {
+
+        if (!this.spriteCanvas) return;
+
+        const ctx = this.workingCtx;
+
+        ctx.clearRect(0, 0, this.width, this.height);
+
+        ctx.fillStyle = "black";
+        ctx.fillRect(0, 0, this.width, this.height);
+
+        const cx = Math.floor(this.width / 2 - this.width / 2 + this.offsetX);
+        const cy = Math.floor(this.height / 2 - this.height / 2 + this.offsetY);
+
+        ctx.drawImage(
+            this.spriteCanvas,
+            cx,
+            cy,
+            this.width,
+            this.height
+        );
+        
+        console.log("sprite render offset:", this.offsetX, this.offsetY);
+        
+        this._drawPreview();
+    }
+
+    // =========================
+    // PREVIEW
+    // =========================
+
+    _drawPreview() {
+
+        const ctx = this.previewCtx;
+
+        ctx.clearRect(
+            0, 0,
+            this.previewCanvas.width,
+            this.previewCanvas.height
+        );
+
+        ctx.imageSmoothingEnabled = false;
+
+        ctx.drawImage(
+            this.workingCanvas,
+            0, 0,
+            this.width,
+            this.height,
+            0, 0,
+            this.previewCanvas.width,
+            this.previewCanvas.height
+        );
+    }
+
+    // =========================
+    // TENSOR
+    // =========================
+
+    toTensor() {
+
+        const ctx = this.workingCtx;
+
+        const imgData = ctx.getImageData(
+            0, 0,
+            this.width,
+            this.height
+        );
+
+        const data = imgData.data;
+
+        const pixelCount = this.width * this.height;
+        const out = new Float32Array(pixelCount * 3);
+
+        for (let p = 0, i = 0; p < data.length; p += 4, i++) {
+
+            let r = data[p];
+            let g = data[p + 1];
+            let b = data[p + 2];
+
+            if (this.layout === "NCHW") {
+                out[i] = r;
+                out[i + pixelCount] = g;
+                out[i + 2 * pixelCount] = b;
+            } else {
+                out[i * 3] = r;
+                out[i * 3 + 1] = g;
+                out[i * 3 + 2] = b;
+            }
+        }
+
+        console.log("=== IMAGE DEBUG ===");
+        console.log("offset:", this.offsetX, this.offsetY);
+        console.log("sample pixel:", out.slice(0, 10));
+
+        console.log("LAYOUT IS:", this.layout)
+        return new ort.Tensor(
+            "float32",
+            out,
+            this.layout === "NCHW"
+                ? [1, 3, this.height, this.width]
+                : [1, this.height, this.width, 3]
+        );
+    }
+}
+
+window.imageManager = new ImageManager();
+</script>
+
+<script>
+    // Настройка ONNX для стабильности
+if (typeof ort !== 'undefined') {
+    ort.env.wasm.numThreads = 1;
+}
+
+let modelReady = false;
+let imageReady = false;
+let lastTensor = null;
+let running = false;
+
+const $ = (id) => document.getElementById(id);
+
+/* =========================
+   UI
+========================= */
+
+const modelFile = $("modelFile");
+const buildBtn = $("buildBtn");
+
+const layoutSelect = $("layoutSelect");
+
+const modelStatus = $("modelStatus");
+
+const inputNameEl = $("inputName");
+const outputNameEl = $("outputName");
+const tensorTypeEl = $("tensorType");
+const tensorDimsEl = $("tensorDims");
+
+const outputCountInfo = $("outputCountInfo");
+
+const labelsSection = $("labelsSection");
+const imageSection = $("imageSection");
+
+const labelId = $("labelId");
+const addBtn = $("addBtn");
+const undoBtn = $("undoBtn");
+const resetBtn = $("resetBtn");
+
+const assignedLabels = $("assignedLabels");
+
+const imageFile = $("imageFile");
+
+const imageWidth = $("imageWidth");
+const imageHeight = $("imageHeight");
+const shiftStep = $("shiftStep");
+
+const workingSize = $("workingSize");
+const imageWarning = $("imageWarning");
+
+const offsetXValue = $("offsetXValue");
+const offsetYValue = $("offsetYValue");
+
+const prediction = $("prediction");
+const topPrediction = $("topPrediction");
+
+const histogram = $("histogram");
+const hctx = histogram.getContext("2d");
+
+/* =========================
+   STATE
+========================= */
+
+const labels = [];
+
+/* =========================
+   MODEL LOAD
+========================= */
+
+buildBtn.onclick = async () => {
+
+    const file = modelFile.files[0];
+
+    if (!file) {
+        modelStatus.textContent = "❌ Файл модели не выбран";
+        return;
+    }
+
+    modelStatus.textContent = "Загрузка модели...";
+
+    try {
+        await ort.env.wasm?.reset?.();
+
+        modelManager.dispose();
+        modelReady = false;
+ 
+        const info = await modelManager.loadModel(file);
+
+        modelReady = true;
+        lastTensor = null;
+        running = false;
+
+        inputNameEl.textContent = info.inputName;
+        outputNameEl.textContent = info.outputName;
+        tensorTypeEl.textContent = info.inputType;
+
+        tensorDimsEl.textContent =
+            JSON.stringify(info.inputDimensions);
+
+        const outCount = modelManager.getOutputCount();
+
+        outputCountInfo.textContent =
+            `Выходов: ${outCount || "?"}`;
+
+        modelStatus.textContent = "✓ модель загружена";
+
+        labelsSection.classList.remove("hidden");
+        imageSection.classList.remove("hidden");
+
+        // reset image state
+        imageReady = false;
+        lastTensor = null;
+
+        imageFile.value = "";
+
+        prediction.textContent = "—";
+        topPrediction.textContent = "";
+
+        offsetXValue.textContent = "0";
+        offsetYValue.textContent = "0";
+
+    } catch (e) {
+        modelStatus.textContent = "❌ " + e.message;
+    }
+};
+
+/* =========================
+   LABELS
+========================= */
+
+function renderLabels() {
+
+    console.log("LABEL MAP =", labels);
+
+    assignedLabels.innerHTML = "";
+
+    labels.forEach((l, i) => {
+
+        const li = document.createElement("li");
+
+        const name =
+            CIFAR100_NAMES[l] ?? `class_${l}`;
+
+        li.textContent = `${i}: ${name} (${l})`;
+
+        assignedLabels.appendChild(li);
+    });
+}
+
+addBtn.onclick = () => {
+    const v = parseInt(labelId.value);
+    if (isNaN(v)) return;
+
+    labels.push(v);
+    renderLabels();
+    runPipeline();
+};
+
+undoBtn.onclick = () => {
+    labels.pop();
+    renderLabels();
+    runPipeline();
+};
+
+resetBtn.onclick = () => {
+    labels.length = 0;
+    renderLabels();
+    runPipeline();
+};
+
+document.getElementById("generateRandomBtn").onclick = () => {
+
+    labels.length = 0;
+
+    const max = 100;
+
+    for (let i = 0; i < 10; i++) {
+        labels.push(Math.floor(Math.random() * max));
+    }
+
+    renderLabels();
+    runPipeline();
+};
+
+/* =========================
+   IMAGE LOAD
+========================= */
+
+imageFile.onchange = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    try {
+        syncImageConfig();        // 1. сначала конфиг
+
+        await imageManager.load(file);  // 2. загрузка + render внутри
+
+        imageReady = true;
+        runPipeline();
+
+    } catch (err) {
+        imageWarning.textContent =
+            "Ошибка загрузки изображения: " + err.message;
+    }
+};
+
+function syncImageConfig() {
+
+    imageManager.setConfig({
+        width: parseInt(imageWidth.value),
+        height: parseInt(imageHeight.value),
+        shiftStep: Number(shiftStep.value) || 1,
+        layout: layoutSelect.value
+    });
+
+    workingSize.textContent =
+        `${imageWidth.value} × ${imageHeight.value}`;
+}
+
+/* =========================
+   SHIFT
+========================= */
+
+function shift(dx, dy) {
+
+     if (!imageManager.image) {
+        return;
+    }
+
+    imageManager.shift(dx, dy);
+
+    offsetXValue.textContent = imageManager.offsetX;
+    offsetYValue.textContent = imageManager.offsetY;
+
+    runPipeline();
+}
+
+window.shift = shift;
+
+document.getElementById("shiftLeftBtn").onclick = () => shift(-1, 0);
+document.getElementById("shiftRightBtn").onclick = () => shift(1, 0);
+document.getElementById("shiftUpBtn").onclick = () => shift(0, -1);
+document.getElementById("shiftDownBtn").onclick = () => shift(0, 1);
+
+document.getElementById("resetShiftBtn").onclick = () => {
+
+    imageManager.resetShift();
+
+    offsetXValue.textContent = 0;
+    offsetYValue.textContent = 0;
+
+    runPipeline();
+};
+
+document.addEventListener("keydown", (e) => {
+
+    switch (e.key) {
+        case "ArrowLeft":
+            shift(-1, 0);
+            break;
+
+        case "ArrowRight":
+            shift(1, 0);
+            break;
+
+        case "ArrowUp":
+            shift(0, -1);
+            break;
+
+        case "ArrowDown":
+            shift(0, 1);
+            break;
+
+        case " ":
+        case "Spacebar": // для старых браузеров
+
+            e.preventDefault();
+
+            if (e.shiftKey) {
+                imageManager.shiftStep = Math.max(1, imageManager.shiftStep - 1);
+            } else {
+                imageManager.shiftStep += 1;
+            }
+            const shiftStepInput = document.getElementById("shiftStep");
+            shiftStepInput.value = imageManager.shiftStep;
+            return;
+
+        default:
+            return;
+    }
+
+    e.preventDefault();
+});
+
+/* =========================
+   PIPELINE
+========================= */
+
+async function runPipeline() {
+
+    if (!modelReady || !imageReady) return;
+    if (running) return;
+
+    running = true;
+
+    try {
+
+        const tensor = imageManager.toTensor();
+        lastTensor = null;
+
+        console.log("=== INPUT TENSOR DEBUG ===");
+        console.log("shape:", tensor.dims);
+        console.log("first values:", tensor.data.slice(0, 20));
+        console.log("min/max:", Math.min(...tensor.data), Math.max(...tensor.data));
+
+        const logits =
+            await modelManager.predictArray(tensor);
+
+        const probs =
+            modelManager.softmax(logits);
+
+        const top =
+            modelManager.getTopClass(probs);
+
+        console.log("=== MODEL DEBUG ===");
+        console.log("logits:", logits);
+        console.log("probs:", probs);
+        console.log("top:", top);
+        console.log("sum probs:", probs.reduce((a,b)=>a+b,0));
+        console.log("max prob:", Math.max(...probs));
+
+        renderPrediction(top);
+        drawHistogram(probs);
+
+    } catch (e) {
+
+        prediction.textContent =
+            "Ошибка: " + e.message;
+
+    } finally {
+        running = false;
+        if (window.gc) window.gc();
+    }
+}
+
+/* =========================
+   OUTPUT
+========================= */
+
+function renderPrediction(top) {
+
+    const modelClass = top.index;
+
+    const label =
+        labels.length > 0
+            ? (CIFAR100_NAMES[labels[modelClass]] ?? `class_${modelClass}`)
+            : `class ${modelClass}`;
+
+    prediction.textContent =
+        `${label} — ${(top.value * 100).toFixed(2)}%`;
+
+    topPrediction.textContent =
+        `Top-1: ${label}`;
+}
+
+/* =========================
+   HISTOGRAM (FIXED)
+========================= */
+
+function drawHistogram(preds) {
+
+    if (!preds?.length) return;
+
+    const ctx = hctx;
+    const w = histogram.width;
+    const h = histogram.height;
+
+    ctx.clearRect(0, 0, w, h);
+
+    // =========================
+    // LAYOUT CONFIG
+    // =========================
+    const bottomPad = 60;   // зона под подписи
+    const topPad = 20;      // зона под grid labels
+    const chartH = h - bottomPad - topPad;
+
+    const step = w / preds.length;
+
+    // =========================
+    // GRID (0..100%)
+    // =========================
+    ctx.strokeStyle = "#eee";
+    ctx.fillStyle = "#666";
+    ctx.font = "14px sans-serif";
+    ctx.textAlign = "right";
+
+    for (let p = 0; p <= 100; p += 10) {
+
+        const y = topPad + chartH - (p / 100) * chartH;
+
+        // line
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(w, y);
+        ctx.stroke();
+
+        // label right axis
+        ctx.fillText(p + "%", w - 5, y - 2);
+    }
+
+    // =========================
+    // BARS
+    // =========================
+    for (let i = 0; i < preds.length; i++) {
+
+        const x = i * step;
+
+        const value = preds[i];
+        const barH = value * chartH;
+
+        const y = topPad + (chartH - barH);
+
+        ctx.fillStyle = "#4a90e2";
+        ctx.fillRect(x + 2, y, step - 4, barH);
+
+        // =========================
+        // LABEL (CENTERED, BELOW)
+        // =========================
+        const classId = labels[i];
+
+        const label =
+            classId !== undefined
+                ? (CIFAR100_NAMES[classId] ?? `class_${classId}`)
+                : `out_${i}`;
+
+        ctx.fillStyle = "#000";
+        ctx.font = "11px sans-serif";
+        ctx.textAlign = "center";
+
+        ctx.fillText(
+            label,
+            x + step / 2,
+            h - 20
+        );
+    }
+}
+
+/* =========================
+   LIVE UPDATE
+========================= */
+
+[imageWidth, imageHeight, shiftStep].forEach(el => {
+
+    el.addEventListener("change", () => {
+
+        if (!imageReady) return;
+
+        syncImageConfig();
+        imageManager.render();
+        runPipeline();
+    });
+});
+
+/* =========================
+   CIFAR
+========================= */
+
+const CIFAR100_NAMES = [
+"apple","aquarium_fish","baby","bear","beaver",
+"bed","bee","beetle","bicycle","bottle",
+"bowl","boy","bridge","bus","butterfly",
+"camel","can","castle","caterpillar","cattle",
+"chair","chimpanzee","clock","cloud","cockroach",
+"couch","crab","crocodile","cup","dinosaur",
+"dolphin","elephant","flatfish","forest","fox",
+"girl","hamster","house","kangaroo","keyboard",
+"lamp","lawn_mower","leopard","lion","lizard",
+"lobster","man","maple_tree","motorcycle","mountain",
+"mouse","mushroom","oak_tree","orange","orchid",
+"otter","palm_tree","pear","pickup_truck","pine_tree",
+"plain","plate","poppy","porcupine","possum",
+"rabbit","raccoon","ray","road","rocket",
+"rose","sea","seal","shark","shrew",
+"skunk","skyscraper","snail","snake","spider",
+"squirrel","streetcar","sunflower","sweet_pepper","table",
+"tank","telephone","television","tiger","tractor",
+"train","trout","tulip","turtle","wardrobe",
+"whale","willow_tree","wolf","woman","worm"
+];
+
+/* =========================
+   POPUP СПИСОК КЛАССОВ
+========================= */
+
+// Открыть модальное окно
+document.getElementById("showClassesBtn").addEventListener('click', function() {
+    const modal = document.getElementById("classesModal");
+    modal.style.display = "flex";
+    renderClassTable();
+    document.getElementById("classSearchInput").value = ""; // Очищаем поиск
+});
+
+// Закрыть модальное окно - ИСПРАВЛЕНО
+document.getElementById("closeModalBtn").addEventListener('click', function() {
+    document.getElementById("classesModal").style.display = "none";
+});
+
+// Закрыть по клику вне модального окна
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById("classesModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+// Поиск по классам - ИСПРАВЛЕНО
+document.getElementById("classSearchInput").addEventListener('input', function() {
+    renderClassTable(this.value.toLowerCase());
+});
+
+// Рендер таблицы классов
+function renderClassTable(searchTerm = "") {
+    const tbody = document.getElementById("classTableBody");
+    tbody.innerHTML = "";
+    
+    CIFAR100_NAMES.forEach((name, index) => {
+        // ИСПРАВЛЕНО: поиск по индексу и названию
+        const match = !searchTerm || 
+                      name.toLowerCase().includes(searchTerm) || 
+                      index.toString().includes(searchTerm);
+        if (!match) return;
+        
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td style="font-weight: bold; color: #4a90e2; padding: 6px 8px; border-bottom: 1px solid #eee;">${index}</td>
+            <td style="padding: 6px 8px; border-bottom: 1px solid #eee;">${name}</td>
+        `;
+        tr.style.cursor = "pointer";
+        tr.addEventListener('click', function() {
+            document.getElementById("labelId").value = index;
+            document.getElementById("classesModal").style.display = "none";
+        });
+        tbody.appendChild(tr);
+    });
+}
+</script>
+
+</body>
+</html>

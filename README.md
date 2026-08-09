@@ -5,7 +5,7 @@
 
 Для **допуска** к экзамену необходимо подготовить отчет по каждой лабораторной и ДЗ. Отчеты по разделам содержат ваши результаты лабораторных работ и ДЗ. Фиксируйте этапы вашей работы, ваши вариации гиперпараметров и моделей, выводы к чему это приводит. На защиту приносите сразу текущую версию отчета.
 
-Отчеты отправлять на почту ``aikanev@bmstu.ru``
+Отчеты отправлять на почту ``aikanev@bmstu.ru``. Оформление по ГОСТ 2.105-95. Высылать без архивирования в docx. Суммарный объём всех отчётов не превышает 20 Мб.
 
 [Примеры](/report/) отчетов
 
@@ -33,15 +33,15 @@
 
 Выражаем благодарность Ишкову Денису за подготовку лабораторных работ
 
-1. [Лабораторная работа №1](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab1.ipynb). Введение в DL <a href="https://colab.research.google.com/github/iu5git/Deep-learning/blob/main/notebooks/Lab1.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-2. [Лабораторная работа №2](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab2.ipynb). Сверточная нейросеть <a href="https://colab.research.google.com/github/iu5git/Deep-learning/blob/main/notebooks/Lab2.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+1. [Лабораторная работа №1](/notebooks/Lab1_(v2026).ipynb). Введение в DL <a href="https://colab.research.google.com/github/iu5git/Deep-learning/blob/main/notebooks/Lab1_(v2026).ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+2. [Лабораторная работа №2](/notebooks/Lab2_(v2026).ipynb). Сверточная нейросеть <a href="https://colab.research.google.com/github/iu5git/Deep-learning/blob/main/notebooks/Lab2_(v2026).ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+3. [Лабораторная работа №3](/notebooks/Lab3_(v2026).ipynb). Регуляризация и аугментация <a href="https://colab.research.google.com/github/iu5git/Deep-learning/blob/main/notebooks/Lab3_(v2026).ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+4. [Лабораторная работа №4](/notebooks/Lab4_(v2026).ipynb). Перенос обучения <a href="https://colab.research.google.com/github/iu5git/Deep-learning/blob/main/notebooks/Lab4_(v2026).ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-3. [Лабораторная работа №3](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab3.ipynb). Регуляризация и аугментация <a href="https://colab.research.google.com/github/iu5git/Deep-learning/blob/main/notebooks/Lab3.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-4. [Лабораторная работа №4](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab4.ipynb). Перенос обучения <a href="https://colab.research.google.com/github/iu5git/Deep-learning/blob/main/notebooks/Lab4.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-5. [Лабораторная работа №5](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Lab5.ipynb). Автоэнкодеры
-6. [Лабораторная работа №6](https://github.com/iu5git/Deep-learning/blob/main/notebooks/tree_classification.ipynb). Классификация LiDAR
-7. [Лабораторная работа №7](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Forest_sat.ipynb). Спутниковые снимки
-8. [Лабораторная работа №8](https://github.com/iu5git/Deep-learning/blob/main/notebooks/LSTM.ipynb). Рекуррентные нейросети
+5. [Лабораторная работа №5](/notebooks/Lab5.ipynb). Автоэнкодеры
+6. [Лабораторная работа №6](/notebooks/Lab6_Tree_classification.ipynb). Классификация LiDAR
+7. [Лабораторная работа №7](/notebooks/Lab7_Forest_sat.ipynb). Спутниковые снимки
+8. [Лабораторная работа №8](/notebooks/Lab8_LSTM.ipynb). Рекуррентные нейросети
 
 
 ## Домашнее задание
@@ -63,8 +63,8 @@
 * [Поиск карточек по изображению](https://github.com/iu5git/Web/blob/main/tutorials/CLIP/README.md)
 
 ## Дополнительные материалы
-- [Генерация текста](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Text_generation.ipynb)
-- [Машинный перевод](https://github.com/iu5git/Deep-learning/blob/main/notebooks/Machine_Translation.ipynb)
+- [Генерация текста](/notebooks/Text_generation.ipynb)
+- [Машинный перевод](/notebooks/Machine_Translation.ipynb)
 - [Телеграм-бот](https://github.com/iu5git/Deep-learning/blob/main/homework2/task.md)
 - [Обучение YOLOv7](/notebooks/YOLOv7.ipynb). Приложение на [React для onnx YOLO](yolov7_ts). Демо-версия [приложения](https://iu5git.github.io/Deep-learning/) и файл обученной [модели](https://drive.google.com/file/d/1lpZMGNB9mYqHvFl_i6YU_U1sOLK0NDj_/view?usp=share_link) для 3 классов (Чайник для газовой плиты, Заварочный чайник, Электрический чайник)
 

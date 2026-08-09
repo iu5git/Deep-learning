@@ -1,0 +1,331 @@
+:root {
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --text: #1f2430;
+    --muted: #6b7280;
+
+    --primary: #4a90e2;
+    --primary-hover: #3a7bd5;
+
+    --border: #e5e7eb;
+
+    --danger: #e74c3c;
+    --success: #2ecc71;
+
+    --shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    margin-bottom: 24px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.subtitle {
+    margin-top: 6px;
+    color: var(--muted);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.hidden {
+    display: none;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+label {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+input,
+select {
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: white;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--primary);
+}
+
+/* =========================
+   GRID
+========================= */
+
+.grid4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    background: #e5e7eb;
+    transition: 0.15s;
+}
+
+button:hover {
+    background: #d1d5db;
+}
+
+button.primary {
+    background: var(--primary);
+    color: white;
+}
+
+button.primary:hover {
+    background: var(--primary-hover);
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.info-block {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.controls-hint {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+}
+
+.controls-hint kbd {
+    font-family: inherit;
+    font-size: 12px;
+    padding: 2px 6px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: #f9fafb;
+    color: var(--text);
+}
+
+/* =========================
+   LABELS
+========================= */
+
+.labels-panel {
+    margin-top: 10px;
+}
+
+.labels-column ul {
+    padding-left: 18px;
+}
+
+/* =========================
+   IMAGE SECTION
+========================= */
+
+.image-settings {
+    margin-top: 10px;
+    padding: 12px;
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+}
+
+.image-meta {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.warning {
+    margin-top: 6px;
+    color: var(--danger);
+    font-size: 13px;
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+/* =========================
+   IMAGE CONTROLS
+========================= */
+
+.image-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.image-controls div {
+    display: flex;
+    gap: 6px;
+}
+
+.shift-btn {
+    min-width: 60px;
+    padding: 6px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.shift-btn:hover {
+    background: #dbeafe;
+}
+
+/* =========================
+   CANVAS / PREVIEW
+========================= */
+
+.image-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+canvas {
+    max-width: 100%;
+}
+
+/* важно: пиксельная визуализация */
+#previewCanvas {
+    image-rendering: pixelated;
+}
+
+/* =========================
+   OFFSET PANEL
+========================= */
+
+.offset-panel {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* =========================
+   RIGHT PANEL
+========================= */
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.prediction {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.top-prediction {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* =========================
+   HISTOGRAM
+========================= */
+
+#histogram {
+    width: 100%;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .grid4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid3 {
+        grid-template-columns: 1fr;
+    }
+}
